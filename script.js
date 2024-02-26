@@ -60,7 +60,6 @@ const first_swiper = new Swiper("#first_swiper", {
 const second_swiper = new Swiper("#second_swiper", {
   loop: true,
   freeMode: true,
-  autoHeight: true,
 
 
   slidesPerView: 1,
@@ -75,7 +74,6 @@ const second_swiper = new Swiper("#second_swiper", {
 const third_swiper = new Swiper("#third_swiper", {
   loop: true,
   freeMode: true,
-  autoHeight: true,
 
   slidesPerView: 1,
 
