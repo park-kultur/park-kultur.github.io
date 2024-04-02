@@ -75,11 +75,33 @@
     font-size: 3em;
   }
 
+  #third_page {
+    height: 3500px;
+    min-height: 3500px;
+  }
 
   .third_page_heading {
     font-size: 65px;
-    padding-bottom: 70px;
+    padding-bottom: 30px;
     padding-left: 45px;
+  }
+
+  .we_img img {
+    width: 175px !important;
+    height: 175px !important;
+  }
+
+  .we_content>div {
+    flex: 0 0 97%;
+    max-width: 97%;
+  }
+  
+  .we_cards h2 {
+    font-size: 33px;
+  }
+
+  .we_cards p {
+    font-size: 27px;
   }
 
   .we_gallery_nav{
@@ -267,8 +289,16 @@
     font-size: 55px;
   }
 
-  .contact_heading {
-    font-size: 23px !important;
+  .contacts_table {
+    display: none;
+  }
+
+  .contacts_table_media {
+    display: block;
+  }
+
+  .table_heading_with_padding {
+    padding-top: 50px !important;
   }
 
   .contacts {
@@ -276,6 +306,10 @@
     flex-direction: column;
     margin-top: 0px;
     gap: 70px;
+  }
+
+  .contact_heading {
+    font-size: 23px !important;
   }
 
   .contact_person {
@@ -292,18 +326,6 @@
 
   .contact_info_1 {
     margin-top: 40px;
-  }
-
-  .media_links_2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 70px;
-  }
-
-  #media_links_1 {
-    margin: 20px;
   }
 
   .google_form_button {
@@ -388,10 +410,33 @@
     font-size: 1.3em;
   }
 
+  #third_page {
+    height: 1850px;
+    min-height: 1850px;
+  }
+
   .third_page_heading {
     font-size: 90px;
-    padding-bottom: 70px;
+    padding-bottom: 30px;
     padding-left: 45px;
+  }
+
+  .we_img img {
+    width: 175px !important;
+    height: 175px !important;
+  }
+
+  .we_content>div {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+  
+  .we_cards h2 {
+    font-size: 28px;
+  }
+
+  .we_cards p {
+    font-size: 22px;
   }
 
   #fourth_page{
@@ -564,27 +609,23 @@
     font-size: 90px;
   }
 
+  .contacts_table {
+    display: none;
+  }
+
+  .contacts_table_media {
+    display: block;
+  }
+
+  .table_heading_with_padding {
+    padding-top: 50px !important;
+  }
+
   .contacts {
     display: flex;
     flex-direction: column;
     margin-top: 0px;
     gap: 70px;
-  }
-
-  .contact_info_1 {
-    margin-top: 40px;
-  }
-
-  #media_links_1 {
-    margin: 20px;
-  }
-
-  .media_links_2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 70px;
   }
 
   .google_form_button {
@@ -645,9 +686,19 @@
     font-size: 1.6em;
   }
 
+  #third_page {
+    height: 2250px;
+    min-height: 2250px;
+  }
+
   .third_page_heading {
     font-size: 95px;
   }
+
+    .we_content>div {
+      flex: 0 0 48%;
+      max-width: 48%;
+    }
 
   .fourth_page_heading {
     font-size: 95px;
@@ -737,6 +788,19 @@
   .modal_gallery_nav {
     padding-bottom: 20px;
   }
+
+  .seventh_page_heading {
+    font-size: 95px;
+    padding-bottom: 20px;
+  }
+
+  .table_heading {
+    font-size: 20px !important;
+  }
+
+  .table_body_row {
+    font-size: 15px !important;
+  }
 }
 
 
@@ -768,6 +832,10 @@
 
   .third_page_heading {
     font-size: 105px;
+  }
+
+  .we_cards h2 {
+    font-size: 34px;
   }
 
 
@@ -865,6 +933,10 @@
   .sixth_page_heading {
     font-size: 105px;
   }
+
+  .seventh_page_heading {
+    font-size: 105px;
+  }
 }
 
 
@@ -889,6 +961,10 @@
     position: fixed;
     right: 4vh !important;
     bottom: 4vh !important;
+  }
+
+  .we_cards h2 {
+    font-size: 34px;
   }
 
 

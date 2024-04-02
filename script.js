@@ -203,3 +203,10 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', checkWindowSize);
     checkWindowSize();
 });
+
+
+document.addEventListener("DOMContent-Loaded", function () {
+  var initialHeight = window.innerHeight + "px"
+  
+  document.documentElement.style.set-Property("--app-height", initialHeight);
+});

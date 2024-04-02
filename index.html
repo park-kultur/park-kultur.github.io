@@ -77,7 +77,6 @@
     </div>
 
     <div class="scroll_down_container">
-      <p class="scroll_down_text">Scroll down</p>
       <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round" color="white" class="feather feather-arrow-down">
         <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -101,105 +100,93 @@
       <p class="third_page_heading">Мы</p>
     </div>
 
-    <div class="we_gallery_content"> 
-      <div class="swiper" id="first_swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a class="we_cards" aria-label="Go to shot">
-              <div class="img"><img src="media/Icons_WE/Page_3_iconA_GOLIKOVA.webp" 
-                  style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;" 
-                  alt="photo"></div>
-              <h2>Александра<br>Голикова</h2>
-              <span>Режиссёр</span>
-            </a>
-          </div>
-
-          <div class="swiper-slide">
-            <a class="we_cards" aria-label="Go to shot">
-              <div class="img"><img src="media/Icons_WE/Page_3_iconIZMAILOVA.webp"
-                  style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;"
-                  alt="photo"></div>
-              <h2>Арина<br>Измайлова</h2>
-              <span>Драматург</span>
-            </a>
-          </div> 
-
-          <div class="swiper-slide">
-            <a class="we_cards" aria-label="Go to shot">
-              <div class="img"><img src="media/Icons_WE/Page_3_iconFGOLIKOV.webp"
-                  style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;"
-                  alt="photo"></div>
-              <h2>Фёдор<br>Голиков</h2>
-              <span>Художник</span>
-            </a>
-          </div>
-
-          <div class="swiper-slide">
-            <a class="we_cards" aria-label="Go to shot">
-              <div class="img"><img src="media/Icons_WE/Page_3_iconVICTORIAMASLOVA.webp"
-                  style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;"
-                  alt="photo"></div>
-              <h2>Виктория<br>Маслова</h2>
-              <span>Художник</span>
-            </a>
-          </div>
-
-          <div class="swiper-slide">
-            <a class="we_cards" aria-label="Go to shot">
-              <div class="img"><img src="media/Icons_WE/Page_3_iconSTRELTSOVA.webp"
-                  style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;"
-                  alt="photo"></div>
-              <h2>Надежда<br>Стрельцова</h2>
-              <span>Генеральный продюсер</span>
-            </a>
-          </div>
-
-          <div class="swiper-slide">
-            <a class="we_cards" aria-label="Go to shot">
-              <div class="img"><img src="media/Icons_WE/Page_3_iconSINICIN_DIMA.webp"
-                  style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;"
-                  alt="photo"></div>
-              <h2>Дмитрий<br>Синицын</h2>
-              <span>Продюсер</span>
-            </a>
-          </div>  
-          
-          <div class="swiper-slide">
-            <a class="we_cards" aria-label="Go to shot">
-              <div class="img"><img src="media/Icons_WE/Page_3_iconSHISHKOVA.webp"
-                  style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;"
-                  alt="photo"></div>
-              <h2>Екатерина<br>Шишкова</h2>
-              <span>Продюсер</span>
-            </a>
-          </div>          
-    
-          <div class="swiper-slide">
-            <a class="we_cards" aria-label="Go to shot">
-              <div class="img"><img src="media/Icons_WE/Page_3_iconSHEVALIE.webp"
-                  style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;"
-                  alt="photo"></div>
-              <h2>Даниил<br>Шевалье</h2>
-              <span>SMM</span>
-            </a>
-          </div>
-        </div>
+    <div class="we_content">
+      <div>
+        <a class="we_cards" aria-label="Go to shot">
+          <div class="we_img"><img src="media/Icons_WE/Page_3_iconA_GOLIKOVA.webp" 
+              style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;" 
+              alt="photo"></div>
+          <h2>Александра<br>Голикова</h2>
+          <p>Режиссёр</p>
+        </a>          
       </div>
-    </div>
 
-    <div class="we_gallery_nav">
-      <button class="btn-reset we_gallery__btn we_gallery__btn--left" aria-label="Slide left" id="first_swiper_prev">
-        <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M26.25 14C26.25 13.7679 26.1578 13.5454 25.9937 13.3813C25.8296 13.2172 25.6071 13.125 25.375 13.125H4.73725L10.2445 7.61951C10.3259 7.53815 10.3904 7.44157 10.4344 7.33528C10.4784 7.22898 10.5011 7.11506 10.5011 7.00001C10.5011 6.88495 10.4784 6.77103 10.4344 6.66474C10.3904 6.55844 10.3259 6.46186 10.2445 6.38051C10.1631 6.29915 10.0666 6.23462 9.96027 6.19059C9.85398 6.14656 9.74005 6.1239 9.625 6.1239C9.50995 6.1239 9.39602 6.14656 9.28973 6.19059C9.18343 6.23462 9.08685 6.29915 9.0055 6.38051L2.0055 13.3805C1.92401 13.4618 1.85936 13.5583 1.81525 13.6646C1.77114 13.771 1.74844 13.8849 1.74844 14C1.74844 14.1151 1.77114 14.2291 1.81525 14.3354C1.85936 14.4417 1.92401 14.5382 2.0055 14.6195L9.0055 21.6195C9.08685 21.7009 9.18343 21.7654 9.28973 21.8094C9.39602 21.8535 9.50995 21.8761 9.625 21.8761C9.74005 21.8761 9.85398 21.8535 9.96027 21.8094C10.0666 21.7654 10.1631 21.7009 10.2445 21.6195C10.3259 21.5382 10.3904 21.4416 10.4344 21.3353C10.4784 21.229 10.5011 21.1151 10.5011 21C10.5011 20.885 10.4784 20.771 10.4344 20.6647C10.3904 20.5584 10.3259 20.4619 10.2445 20.3805L4.73725 14.875H25.375C25.6071 14.875 25.8296 14.7828 25.9937 14.6187C26.1578 14.4546 26.25 14.2321 26.25 14Z" />
-        </svg>
-      </button>
-      <button class="btn-reset we_gallery__btn we_gallery__btn--right" aria-label="Slide right" id="first_swiper_next">
-        <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M1.75001 14C1.75001 13.7679 1.84219 13.5454 2.00629 13.3813C2.17038 13.2172 2.39294 13.125 2.62501 13.125H23.2628L17.7555 7.61951C17.6742 7.53815 17.6096 7.44157 17.5656 7.33528C17.5216 7.22898 17.4989 7.11506 17.4989 7.00001C17.4989 6.88495 17.5216 6.77103 17.5656 6.66474C17.6096 6.55844 17.6742 6.46186 17.7555 6.38051C17.8369 6.29915 17.9334 6.23462 18.0397 6.19059C18.146 6.14656 18.26 6.1239 18.375 6.1239C18.4901 6.1239 18.604 6.14656 18.7103 6.19059C18.8166 6.23462 18.9132 6.29915 18.9945 6.38051L25.9945 13.3805C26.076 13.4618 26.1406 13.5583 26.1848 13.6646C26.2289 13.771 26.2516 13.8849 26.2516 14C26.2516 14.1151 26.2289 14.2291 26.1848 14.3354C26.1406 14.4417 26.076 14.5382 25.9945 14.6195L18.9945 21.6195C18.9132 21.7009 18.8166 21.7654 18.7103 21.8094C18.604 21.8535 18.4901 21.8761 18.375 21.8761C18.26 21.8761 18.146 21.8535 18.0397 21.8094C17.9334 21.7654 17.8369 21.7009 17.7555 21.6195C17.6742 21.5382 17.6096 21.4416 17.5656 21.3353C17.5216 21.229 17.4989 21.1151 17.4989 21C17.4989 20.885 17.5216 20.771 17.5656 20.6647C17.6096 20.5584 17.6742 20.4619 17.7555 20.3805L23.2628 14.875H2.62501C2.39294 14.875 2.17038 14.7828 2.00629 14.6187C1.84219 14.4546 1.75001 14.2321 1.75001 14Z" />
-        </svg>
-      </button>
+
+      <div>
+        <a class="we_cards" aria-label="Go to shot">
+          <div class="we_img"><img src="media/Icons_WE/Page_3_iconIZMAILOVA.webp"
+              style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;"
+              alt="photo"></div>
+          <h2>Арина<br>Измайлова</h2>
+          <p>Драматург</p>
+        </a>
+      </div>
+
+
+      <div>
+        <a class="we_cards" aria-label="Go to shot">
+          <div class="we_img"><img src="media/Icons_WE/Page_3_iconFGOLIKOV.webp"
+              style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;"
+              alt="photo"></div>
+          <h2>Фёдор<br>Голиков</h2>
+          <p>Художник</p>
+        </a>          
+      </div>  
+ 
+      
+      <div>
+        <a class="we_cards" aria-label="Go to shot">
+          <div class="we_img"><img src="media/Icons_WE/Page_3_iconVICTORIAMASLOVA.webp"
+              style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;"
+              alt="photo"></div>
+          <h2>Виктория<br>Маслова</h2>
+          <p>Художник</p>
+        </a>
+      </div>
+
+
+      <div>
+        <a class="we_cards" aria-label="Go to shot">
+          <div class="we_img"><img src="media/Icons_WE/Page_3_iconSTRELTSOVA.webp"
+              style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;"
+              alt="photo"></div>
+          <h2>Надежда<br>Стрельцова</h2>
+          <p>Генеральный продюсер</p>
+        </a>
+      </div>
+
+
+      <div>
+        <a class="we_cards" aria-label="Go to shot">
+          <div class="we_img"><img src="media/Icons_WE/Page_3_iconSINICIN_DIMA.webp"
+              style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;"
+              alt="photo"></div>
+          <h2>Дмитрий<br>Синицын</h2>
+          <p>Продюсер</p>
+        </a>
+      </div>
+
+
+      <div>
+        <a class="we_cards" aria-label="Go to shot">
+          <div class="we_img"><img src="media/Icons_WE/Page_3_iconSHISHKOVA.webp"
+              style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;"
+              alt="photo"></div>
+          <h2>Екатерина<br>Шишкова</h2>
+          <p>Продюсер</p>
+        </a>
+      </div>
+
+
+      <div>
+        <a class="we_cards" aria-label="Go to shot">
+          <div class="we_img"><img src="media/Icons_WE/Page_3_iconSHEVALIE.webp"
+              style="width: 250px;  height: 250px; border-radius: 50%; object-fit: cover; background-position: 50% 50%; pointer-events: none;"
+              alt="photo"></div>
+          <h2>Даниил<br>Шевалье</h2>
+          <p>SMM</p>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -224,44 +211,11 @@
     <h1 class="fifth_page_heading">Афиша</h1>
 
     <div class="afisha">
+    
       <div class="afisha_event">
         <div class="afisha_description">
           <div class="afisha_date">
-            <div class="afisha_day afisha_text">27</div>
-            <div class="afisha_month afisha_text">Февраля</div>
-          </div>
-          <div class="afisha_info">
-            <a class="button nav_link afisha_title afisha_text" href="#fourth_page">Дорогая Елена Сергеевна (16+)</a>
-            <div class="afisha_time afisha_text">вт 19:00</div>
-          </div>
-        </div>
-        
-        <div class="afisha_action">
-          <a class="buy_ticket afisha_ticket" href="https://iframeab-pre8338.intickets.ru/event/14546872/" target="_blank">Купить билет</a>
-        </div>
-      </div> 
-
-      <div class="afisha_event">
-        <div class="afisha_description">
-          <div class="afisha_date">
-            <div class="afisha_day afisha_text">28</div>
-            <div class="afisha_month afisha_text">Февраля</div>
-          </div>
-          <div class="afisha_info">
-            <a class="button nav_link afisha_title afisha_text" href="#fourth_page">Дорогая Елена Сергеевна (16+)</a>
-            <div class="afisha_time afisha_text">ср 19:00</div>
-          </div>
-        </div>  
-        <div class="afisha_action">
-          <a class="buy_ticket afisha_ticket" href="https://iframeab-pre8338.intickets.ru/event/14546872/"
-            target="_blank">Купить билет</a>
-        </div>
-      </div>
-
-      <div class="afisha_event">
-        <div class="afisha_description">
-          <div class="afisha_date">
-            <div class="afisha_day afisha_text">29</div>
+            <div class="afisha_day afisha_text">15</div>
             <div class="afisha_month afisha_text">Апреля</div>
           </div>
           <div class="afisha_info">
@@ -270,15 +224,15 @@
           </div>
         </div>
         <div class="afisha_action">
-          <a class="buy_ticket afisha_ticket"
-            target="_blank">Билеты скоро в продаже</a>
+          <a class="buy_ticket afisha_ticket" href="https://iframeab-pre8338.intickets.ru/event/14108526/?fbclid=PAAaYf3IAbpduU5r_v3PbAFwpdnYiz1maMpGXA6db9hQtG_RW7j0LGNWep_2Y"
+            target="_blank">Купить билет</a>
         </div>
       </div>
   
       <div class="afisha_event">
         <div class="afisha_description">
           <div class="afisha_date">
-            <div class="afisha_day afisha_text">30</div>
+            <div class="afisha_day afisha_text">16</div>
             <div class="afisha_month afisha_text">Апреля</div>
           </div>
           <div class="afisha_info">
@@ -287,10 +241,46 @@
           </div>
         </div>
         <div class="afisha_action">
+          <a class="buy_ticket afisha_ticket" href="https://iframeab-pre8338.intickets.ru/event/14108526/?fbclid=PAAaYf3IAbpduU5r_v3PbAFwpdnYiz1maMpGXA6db9hQtG_RW7j0LGNWep_2Y"
+            target="_blank">Купить билет</a>
+        </div>
+      </div>
+
+      <!-- <div class="afisha_event">
+        <div class="afisha_description">
+          <div class="afisha_date">
+            <div class="afisha_day afisha_text"></div>
+            <div class="afisha_month afisha_text">Не определено</div>
+          </div>
+          <div class="afisha_info">
+            <a class="button nav_link afisha_title afisha_text" href="#fourth_page">Дорогая Елена Сергеевна (16+)</a>
+            <div class="afisha_time afisha_text"></div>
+          </div>
+        </div>
+        
+        <div class="afisha_action">
+          <a class="buy_ticket afisha_ticket" 
+            target="_blank">Билеты скоро в продаже</a>
+        </div>
+      </div> 
+
+      <div class="afisha_event">
+        <div class="afisha_description">
+          <div class="afisha_date">
+            <div class="afisha_day afisha_text"></div>
+            <div class="afisha_month afisha_text">Не определено</div>
+          </div>
+          <div class="afisha_info">
+            <a class="button nav_link afisha_title afisha_text" href="#fourth_page">Дорогая Елена Сергеевна (16+)</a>
+            <div class="afisha_time afisha_text"></div>
+          </div>
+        </div>  
+        <div class="afisha_action">
           <a class="buy_ticket afisha_ticket"
             target="_blank">Билеты скоро в продаже</a>
         </div>
-      </div>
+      </div> -->
+
     </div>
   </div>
 
@@ -678,67 +668,190 @@
       <div class="seventh_page_content">
         <p class="seventh_page_heading">Контакты</p>
   
-        <div class="contacts">
-          <div class="contact_info contact_info_1">
-            <h3 class="contact_heading">Администрация и PR</h3>
-            <p class="contact_person contact_name">Надежда Стрельцова</p>
-            <p class="contact_person contact_phone"><a class="contact-link" href="tel:+79264467764">+7-926-446-77-64</a>
-            </p>
-            <p class="contact_person contact_email"><a class="contact-link"
-                href="mailto:post@parkkultur.ru">post@parkkultur.ru</a></p>
-            <p class="contact_person contact_description">Вопросы по билетам, предложения о сотрудничестве, желание
-              присоединиться к команде и любые другие
-              комментарии</p>
-  
-  
-            <div class="media_links" id="media_links_1">
-  
-              <div class="social_links">
-                <a class="buy_ticket google_form_button"
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSc91oE_3-cEeDFnvYvyPL4d6fBagBftTF9kR03-Ye3TH8u71g/viewform"
-                  target="_blank">отзывы и предложения</a>
+        <table class="contacts_table">
+          <tr>
+            <th class="table_head_row">
+              <h3 class="table_heading">Администрация и PR</h3>
+            </th>
+            
+            <th class="table_head_row">
+              <h3 class="table_heading">Social media</h3>
+            </th>
+          </tr>   
+
+          <tr>
+            <td class="table_body_row">
+              <p class="contact_person contact_name">Надежда Стрельцова</p>
+            </td>
+            <td class="table_body_row">
+              <p class="contact_person contact_name">Даниил Шевалье</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="table_body_row">
+              <p class="contact_person contact_description">Вопросы по билетам, предложения о сотрудничестве, желание присоединиться к команде и любые другие комментарии</p>
+            </td>
+            <td class="table_body_row">
+              <p class="contact_person contact_description">Коллаборации в соц сетях, восхищения нашими дизайнерами, ваши фотографии</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="table_body_row">
+              <p class="contact_person contact_phone"><a class="contact-link" href="tel:+79264467764">+7-926-446-77-64</a></p>
+            </td>
+            <td class="table_body_row">
+              <p class="contact_person contact_phone"><a class="contact-link" href="tel:+79969643259">+7-996-964-32-59</a></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="table_body_row">
+              <p class="contact_person contact_email"><a class="contact-link" href="mailto:post@parkkultur.ru">post@parkkultur.ru</a></p>    
+            </td>
+            <td class="table_body_row">
+              <p class="contact_person contact_email"><a class="contact-link" href="mailto:smm@parkkultur.ru">smm@parkkultur.ru</a></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="table_body_row">
+              <div class="media_links" id="media_links_1">
+                <div class="social_links">
+                  <a class="buy_ticket google_form_button"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSc91oE_3-cEeDFnvYvyPL4d6fBagBftTF9kR03-Ye3TH8u71g/viewform"
+                    target="_blank">отзывы и предложения</a>
+                </div>
               </div>
-  
-            </div>
-  
-  
-          </div>
-  
-          <div class="contact_info contact_info_2">
-            <h3 class="contact_heading">Social media</h3>
-            <p class="contact_person contact_name">Даниил Шевалье</p>
-            <p class="contact_person contact_phone"><a class="contact-link" href="tel:+79969643259">+7-996-964-32-59</a>
-            </p>
-            <p class="contact_person contact_email"><a class="contact-link"
-                href="mailto:smm@parkkultur.ru">smm@parkkultur.ru</a></p>
-            <p class="contact_person contact_description">Коллаборации в соц сетях, восхищения нашими дизайнерами, ваши
-              фотографии</p>
-  
-            <div class="media_links media_links_2">
-              <div class="social_links">
-                <a href="https://vk.com/park.kultur" target="_blank">
-                  <i class="fa-brands fa-vk" style="color: #ffffff;"></i>
-                </a>
-  
-                <a href="https://www.instagram.com/park.kultur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                  target="_blank">
-                  <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
-                </a>
-  
-                <a href="https://t.me/parkkultur" target="_blank">
-                  <i class="fa-brands fa-telegram" style="color: #ffffff;"></i>
-                </a>
-  
-                <a href="https://www.youtube.com/@park.kultur" target="_blank">
-                  <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
-                </a>
+            </td>
+
+            <td class="table_body_row">
+              <div class="media_links media_links_2">
+                <div class="social_links">
+                  <a href="https://vk.com/park.kultur" target="_blank">
+                    <i class="fa-brands fa-vk" style="color: #ffffff;"></i>
+                  </a>
+              
+                  <a href="https://www.instagram.com/park.kultur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank">
+                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                  </a>
+              
+                  <a href="https://t.me/parkkultur" target="_blank">
+                    <i class="fa-brands fa-telegram" style="color: #ffffff;"></i>
+                  </a>
+              
+                  <a href="https://www.youtube.com/@park.kultur" target="_blank">
+                    <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
+                  </a>
+                </div>
               </div>
-            </div>
-  
-  
-          </div>
-        </div>
-  
+            </td>
+          </tr>
+        </table>
+
+        <table class="contacts_table_media">
+          <tr>
+            <th class="table_head_row">
+              <h3 class="table_heading table_heading_with_padding">Администрация и PR</h3>
+            </th>
+          </tr>   
+
+          <tr>
+            <td class="table_body_row">
+              <p class="contact_person contact_name">Надежда Стрельцова</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="table_body_row">
+              <p class="contact_person contact_description">Вопросы по билетам, предложения о сотрудничестве, желание присоединиться к команде и любые другие комментарии</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="table_body_row">
+              <p class="contact_person contact_phone"><a class="contact-link" href="tel:+79264467764">+7-926-446-77-64</a></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="table_body_row">
+              <p class="contact_person contact_email"><a class="contact-link" href="mailto:post@parkkultur.ru">post@parkkultur.ru</a></p>    
+            </td>
+          </tr>
+
+          <tr>
+            <td class="table_body_row">
+              <div class="media_links" id="media_links_1">
+                <div class="social_links">
+                  <a class="buy_ticket google_form_button"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSc91oE_3-cEeDFnvYvyPL4d6fBagBftTF9kR03-Ye3TH8u71g/viewform"
+                    target="_blank">отзывы и предложения</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="table_head_row">
+              <h3 class="table_heading table_heading_with_padding">Social media</h3>
+            </th>
+          </tr>
+
+          <tr>
+            <td class="table_body_row">
+              <p class="contact_person contact_name">Даниил Шевалье</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="table_body_row">
+              <p class="contact_person contact_description">Коллаборации в соц сетях, восхищения нашими дизайнерами, ваши
+                фотографии</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="table_body_row">
+              <p class="contact_person contact_phone"><a class="contact-link" href="tel:+79969643259">+7-996-964-32-59</a></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="table_body_row">
+              <p class="contact_person contact_email"><a class="contact-link"
+                  href="mailto:smm@parkkultur.ru">smm@parkkultur.ru</a></p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="table_body_row">
+              <div class="media_links media_links_2">
+                <div class="social_links">
+                  <a href="https://vk.com/park.kultur" target="_blank">
+                    <i class="fa-brands fa-vk" style="color: #ffffff;"></i>
+                  </a>
+          
+                  <a href="https://www.instagram.com/park.kultur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank">
+                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                  </a>
+          
+                  <a href="https://t.me/parkkultur" target="_blank">
+                    <i class="fa-brands fa-telegram" style="color: #ffffff;"></i>
+                  </a>
+          
+                  <a href="https://www.youtube.com/@park.kultur" target="_blank">
+                    <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
+                  </a>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+        </table>
       </div>
     </div>
   </div>
