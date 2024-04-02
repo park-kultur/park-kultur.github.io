@@ -64,13 +64,6 @@
     font-size: 2.7em;
   }
 
-  .scroll_down_container {
-      position: fixed;
-      right: 4vh !important;
-      bottom: 4vh !important;
-    }
-
-
   .second_page_overlay h3 {
     font-size: 3em;
   }
@@ -401,12 +394,6 @@
     font-size: 1.17em;
   }
 
-  .scroll_down_container {
-    position: fixed;
-    right: 4vh !important;
-    bottom: 4vh !important;
-  }
-
   .second_page_overlay h3 {
     font-size: 1.3em;
   }
@@ -677,12 +664,6 @@
     font-size: 1.17em;
   }
 
-  .scroll_down_container {
-    position: fixed;
-    right: 4vh !important;
-    bottom: 4vh !important;
-  }
-
   .second_page_overlay h3 {
     font-size: 1.6em;
   }
@@ -848,12 +829,6 @@
     font-size: 1.35em;
   }
 
-  .scroll_down_container {
-    position: fixed;
-    right: 4vh !important;
-    bottom: 4vh !important;
-  }
-
   #call-form {
     width: 275px;
     height: 400px;
@@ -958,12 +933,6 @@
     font-size: 1.35em;
   }
 
-  .scroll_down_container {
-    position: fixed;
-    right: 4vh !important;
-    bottom: 4vh !important;
-  }
-
   .we_cards h2 {
     font-size: 34px;
   }
@@ -1018,13 +987,5 @@
 
   #seventh_page {
     min-height: 730px;
-  }
-}
-
-@media screen and (min-height: 810px) {
-  .scroll_down_container {
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
   }
 }
