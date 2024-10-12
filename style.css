@@ -153,9 +153,9 @@ header{
 
 
 
-/* ---------- first_page --------- */
+/* ---------- initial_block --------- */
 
-#first_page{
+#initial_block{
   position: relative;
   background-image: url('media/Pages/Page_1_BG.webp');
   background-position: 50% 50%;
@@ -166,6 +166,39 @@ header{
   justify-content: end;
   align-items: center;
   width: 100%;
+}
+
+.initial_text_overlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: block;
+}
+
+.initial_text_overlay_top {
+  background-image: url('media/Pages/Page_1_OL_Top.webp');
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 1920 / 600;
+  position: absolute; /* Allow it to overlap */
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.initial_text_overlay_bottom {
+  background-image: url('media/Pages/Page_1_OL_Bottom.webp');
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 1920 / 600;
+  position: absolute; /* Allow it to overlap */
+  bottom: -15px;
+  left: 0;
+  z-index: 0;
 }
 
 .text{
@@ -186,7 +219,7 @@ header{
   text-align: center;
 }
 
-#first_page h1{
+#initial_block h1{
   font-size: 8.5em;
   margin: 0px;
   font-family: 'Mak-bold';
@@ -194,7 +227,7 @@ header{
   line-height: 0.9;
 }
 
-#first_page h2 {
+#initial_block h2 {
   font-size: 3.8em;
   font-family: 'Hero-light';
   color: white;
@@ -211,7 +244,6 @@ header{
 }
 
 .scroll_down_container{
-
   bottom: 5vh;
   width: 100%;
   position: fixed;
@@ -220,6 +252,8 @@ header{
   justify-content: center;
   align-items: center;
   animation: bounce 2s infinite;
+  text-decoration-color: white;
+  text-underline-offset: 0.1em;
 }
 
 @keyframes bounce {
@@ -241,13 +275,22 @@ header{
   }
 }
 
-/* ---------- /first_page --------- */
+.scroll_down_text{
+  font-size: 1.5em;
+  font-family: 'Hero-regular';
+  color: white;
+  margin: 0px;
+  text-align: center;
+  margin-bottom: -25px;
+}
+
+/* ---------- /initial_block --------- */
 
 
 
-/* ---------- second_page --------- */
+/* ---------- about_project_block --------- */
 
-#second_page {
+#about_project_block {
   background-image: url('media/Pages/Page_2_BG.webp');
   background-position: 50% 50%;
   background-size: cover;
@@ -256,7 +299,7 @@ header{
   min-height: 800px;
 }
 
-.second_page_overlay {
+.about_project_block_overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -268,7 +311,7 @@ header{
   align-items: center;
 }
 
-.second_page_overlay h3 {
+.about_project_block_overlay h3 {
   width: 55%;
   text-align: center;
   color: white;
@@ -277,22 +320,22 @@ header{
   padding: 1.25px;
 }
 
-/* ---------- /second_page --------- */
+/* ---------- /about_project_block --------- */
 
 
 
-/* ---------- third_page --------- */
+/* ---------- about_us_block --------- */
 
-#third_page {
-  height: 1800px;
-  min-height: 1800px;
+#about_us_block {
+  height: fit-content;
+  min-height: fit-content;
   background-image: url('media/Pages/Page_3_BG.webp');
   background-position: 50% 50%;
-  background-size: 100% 100%;
+  background-size: cover;
   position: relative;
 }
 
-.third_page_heading{
+.about_us_block_heading{
   font-family: 'Mak-bold';
   font-size: 7em;
   margin: 0px;
@@ -300,7 +343,29 @@ header{
   color: white;
 }
 
-.we_content {
+.about_us_block_paragraph {
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  /* height: 100%; */
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_us_block_paragraph h3 {
+  width: 55%;
+  /* text-align: center; */
+  color: white;
+  font-family: 'Hero-light';
+  font-size: 1.5em;
+  padding: 1.25px;
+  padding-bottom: 75px;
+}
+
+.about_us_content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -308,19 +373,23 @@ header{
   margin: auto;
 }
 
-.we_content>div {
+.about_us_content_media {
+  display: none;
+}
+
+.about_us_content>div {
   flex: 0 0 30%;
   max-width: 30%;
   box-sizing: border-box;
   padding: 10px 30px 80px 30px;
 }
 
-.we_cards {
+.about_us_cards {
   text-decoration: none;
   flex-shrink: 0;
 }
 
-.we_cards h2{
+.about_us_cards h2{
   font-family: 'Mak-bold';
   color: white;
   font-size: 2.6rem;
@@ -328,14 +397,14 @@ header{
   text-align: center;
 }
 
-.we_cards p {
+.about_us_cards p {
   font-family: 'Hero-light';
   color: white;
   font-size: 1.5rem;
   text-align: center;
 }
 
-.we_img {
+.about_us_img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -347,23 +416,24 @@ header{
   text-align: center;
 }
 
-/* ---------- /third_page --------- */
+/* ---------- /about_us_block --------- */
 
 
 
-/* ---------- fourth_page --------- */
+/* ---------- theatre_block --------- */
 
-#fourth_page {
+#theatre_block {
   height: 950px;
   min-height: 950px;
-  background-image: url('media/Pages/Page_7_BG.webp');
+  /* background-image: url('media/Pages/Page_7_BG.webp'); */
+  background-color: black;
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
 
 }
 
-.fourth_page_heading {
+.theatre_block_heading {
   font-family: 'Mak-bold';
   font-size: 7em;
   margin: 0px;
@@ -375,17 +445,19 @@ header{
 /* модальное окно №1 */
 
 .our_shows {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   gap: 100px;
+  padding-left: 33%;
 }
 
 #call-form {
   /* font-family: "Hero-regular";
   font-size: 2em; */
   width: 350px;
-  height: 450px;
+  height: max-content;
 }
 
 .btn-reset {
@@ -533,7 +605,7 @@ p.modal_text {
   /* font-family: "Hero-regular";
   font-size: 2em; */
   width: 350px;
-  height: 450px;  
+  height: max-content;
 }
 
 .btn-reset_2 {
@@ -568,13 +640,13 @@ p.modal_text {
   width: 100%;
 }
 
-/* ---------- /fourth_page --------- */
+/* ---------- /theatre_block --------- */
 
 
 
-/* ---------- fifth_page --------- */
+/* ---------- affiche_page --------- */
 
-#fifth_page {
+#affiche_page {
   height: 800px;
   min-height: 800px;
   width: 100%;
@@ -584,7 +656,7 @@ p.modal_text {
   position: relative;
 }
 
-.fifth_page_heading {
+.affiche_page_heading {
   font-family: 'Mak-bold';
   font-size: 7em;
   color: white;
@@ -660,22 +732,22 @@ p.modal_text {
   border: 1px solid white;
 }
 
-/* ---------- /fifth_page --------- */
+/* ---------- /affiche_page --------- */
 
 
 
-/* ---------- sixth_page --------- */
+/* ---------- actors_page --------- */
 
-#sixth_page {
-  height: 800px;
-  min-height: 800px;
+#actors_page {
+  height: 1000px;
+  min-height: 1000px;
   background-image: url('media/Pages/Page_8_BG.webp');
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
 }
 
-.sixth_page_heading {
+.actors_page_heading {
   font-family: 'Mak-bold';
   font-size: 7em;
   color: white;
@@ -686,12 +758,32 @@ p.modal_text {
   overflow: hidden;
 }
 
+.about_us_content_media {
+  overflow: hidden;
+}
+
 .actors_cards {
   text-decoration: none;
   flex-shrink: 0;
 }
 
+.actors_cards h2{
+  font-family: 'Mak-bold';
+  color: white;
+  font-size: 2.6rem;
+  margin: 30px 0 5px;
+  text-align: center;
+}
+
 .actors_gallery_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 50px;
+}
+
+.about_us_gallery_nav {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -711,15 +803,27 @@ p.modal_text {
   fill: white;
 }
 
-/* ---------- /sixth_page --------- */
+.about_us_gallery__btn {
+  width: 28px;
+  height: 28px;
+}
+
+.about_us_gallery__btn svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  fill: white;
+}
+
+/* ---------- /actors_page --------- */
 
 
 
-/* ---------- seventh_page --------- */
+/* ---------- contacts_page --------- */
 
-#seventh_page {
-  height: 700px;
-  min-height: 700px;
+#contacts_page {
+  height: 750px;
+  min-height: 750px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -728,25 +832,34 @@ p.modal_text {
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
+  --contacts-color: #A9A9A9;
 }
 
-.seventh_page_content {
-  height: 100%;
+.contacts_page_content {
   width: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.seventh_page_heading {
+.contacts_page_heading {
   font-family: 'Mak-bold';
   font-size: 7em;
   margin: 0px;
-  color: white;
+  color: var(--contacts-color);
 }
 
-.seventh_page_overlay {
+.contacts_page_description{
+  font-family: 'Hero-regular';
+  color: var(--contacts-color);
+  font-size: 1em;
+  text-align: start;
+  margin-bottom: 2em;
+}
+
+.contacts_page_overlay {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -774,11 +887,12 @@ p.modal_text {
   width: 250px !important;
   font-family: 'Hero-bold' !important;
   text-align: start !important;
+  color: var(--contacts-color) !important;
 }
 
 .contact_person {
   font-family: 'Hero-regular';
-  color: white;
+  color: var(--contacts-color);
   font-size: 1em;
   text-align: start;
 }
@@ -798,7 +912,7 @@ p.modal_text {
 }
 
 .contact-link {
-  color: white;
+  color: var(--contacts-color);
 }
 
 .media_links {
@@ -824,6 +938,10 @@ p.modal_text {
   text-decoration: none;
 }
 
+.fa-brands {
+  color: var(--contacts-color)
+}
+
 .fa-instagram {
   font-size: 55px;
 }
@@ -841,15 +959,15 @@ p.modal_text {
 }
 
 .google_form_button {
-  color: white;
-  border: 1px solid white;
+  color: var(--contacts-color);
+  border: 1px solid var(--contacts-color);
   height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* ---------- /seventh_page --------- */
+/* ---------- /contacts_page --------- */
 
 
 .contacts_table_media {

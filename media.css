@@ -51,49 +51,70 @@
     height: 24%;
   }
 
-  #first_page h1 {
+  #initial_block h1 {
     font-size: 13em;
     padding: 0px 30px 0px 30px;
   }
 
-  #first_page h2 {
+  #initial_block h2 {
     font-size: 3.8em;
   }
+
+  .initial_text_overlay_top{
+    top: 64px;
+  }
+
+  .initial_text_overlay_bottom{
+    bottom: 200px;
+  } 
 
   .scroll_down_text{
     font-size: 2.7em;
   }
+  .scroll_down_container{
+    text-underline-offset: 0.5em;
+  }
 
-  .second_page_overlay h3 {
+  .about_project_block_overlay h3 {
     font-size: 3em;
+    width: 85%;
   }
 
-  #third_page {
-    height: 3500px;
-    min-height: 3500px;
+  #about_us_block {
+    height: fit-content;
+    min-height: fit-content;
   }
 
-  .third_page_heading {
+  .about_us_block_heading {
     font-size: 65px;
     padding-bottom: 30px;
     padding-left: 45px;
   }
 
-  .we_img img {
-    width: 175px !important;
-    height: 175px !important;
+  .about_us_block_paragraph h3 {
+    font-size: 3em;
+    width: 75%;
   }
 
-  .we_content>div {
+  .about_us_img img {
+    width: 300px !important;
+    height: 300px !important;
+  }
+
+  /* .about_us_content>div {
     flex: 0 0 97%;
     max-width: 97%;
-  }
+  } */
   
-  .we_cards h2 {
+  .about_us_cards h2 {
     font-size: 33px;
   }
 
-  .we_cards p {
+  .actors_cards h2{
+    font-size: 33px;
+  }
+
+  .about_us_cards p {
     font-size: 27px;
   }
 
@@ -101,12 +122,12 @@
     gap: 40px;
   }
 
-  #fourth_page {
-    height: 1200px;
-    min-height: 1200px;
+  #theatre_block {
+    height: fit-content;
+    min-height: fit-content;
   }
 
-  .fourth_page_heading {
+  .theatre_block_heading {
     font-size: 55px;
     padding-left: 45px;
     padding-bottom: 65px;
@@ -114,13 +135,13 @@
 
   #call-form {
     width: 250px;
-    height: 240px;
+    height: max-content;
     font-size: 22px;
   }
 
   #call-form-2 {
     width: 250px;
-    height: 240px;
+    height: max-content;
     font-size: 22px;
   }
 
@@ -135,9 +156,11 @@
   .our_shows {
     width: 100%;
     height: 980px;
-    gap: 250px;    
+    gap: 50px;    
     flex-direction: column;
-    justify-content: start;
+    /* justify-content: center; */
+    align-items: center;
+    padding-left: 0%;
   }
 
   .modal-parent {
@@ -146,7 +169,8 @@
   }
 
   .modal-wrapper {
-    height: 99%;
+    height: 80%;
+    width: 110%;
   }
 
   .modal {
@@ -194,12 +218,12 @@
   }
 
 
-  #fifth_page {
-    height: 1130px;
-    min-height: 1130px;
+  #affiche_page {
+    height: 700px;
+    min-height: 700px;
   }
 
-  .fifth_page_heading {
+  .affiche_page_heading {
     font-size: 55px;
     padding-left: 45px;
     padding-bottom: 10px;
@@ -258,28 +282,32 @@
     margin-top: 30px;
   }
 
-  #sixth_page {
-    height: 600px;
-    min-height: 600px !important;
+  #actors_page {
+    height: 660px;
+    min-height: 660px !important;
   }
 
-  .sixth_page_heading {
+  .actors_page_heading {
     font-size: 55px;
     padding: 75px 0px 45px 45px;
   }
 
-  .fourth_page_images {
+  .theatre_block_images {
     width: 300px;
     height: 300px;
   }
 
-  #seventh_page {
+  #contacts_page {
     height: 950px;
     min-height: 950px;
   }
 
-  .seventh_page_heading {
+  .contacts_page_heading {
     font-size: 55px;
+  }
+
+  .contacts_page_description{
+    font-size: 15px !important;
   }
 
   .contacts_table {
@@ -287,6 +315,14 @@
   }
 
   .contacts_table_media {
+    display: block;
+  }
+
+  .about_us_content {
+    display: none;
+  }
+
+  .about_us_content_media {
     display: block;
   }
 
@@ -335,7 +371,6 @@
   }
 }
 
-
 @media screen and (min-width: 544px) and (max-width: 575px){
   .text{
     height: 15%;
@@ -344,7 +379,6 @@
 
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
-
   .nav_link{
     font-size: 1.3em;
   }
@@ -381,58 +415,78 @@
     right: 0;
   }
 
-  #first_page h1 {
+  #initial_block h1 {
     font-size: 5em;
     padding: 0px 30px 0px 30px;
   }
 
-  #first_page h2 {
+  #initial_block h2 {
     font-size: 2.1em;
+  }
+
+  .initial_text_overlay_top{
+    top: 64px;
+  }
+
+  .initial_text_overlay_bottom{
+    bottom: 125px;
   }
 
   .scroll_down_text{
     font-size: 1.17em;
+  }  
+
+  .scroll_down_container{
+    text-underline-offset: 0.25em;
   }
 
-  .second_page_overlay h3 {
+  .about_project_block_overlay h3 {
     font-size: 1.3em;
   }
 
-  #third_page {
-    height: 1850px;
-    min-height: 1850px;
+  #about_us_block {
+    height: fit-content;
+    min-height: fit-content;
   }
 
-  .third_page_heading {
+  .about_us_block_heading {
     font-size: 90px;
     padding-bottom: 30px;
     padding-left: 45px;
   }
 
-  .we_img img {
-    width: 175px !important;
-    height: 175px !important;
+  .about_us_block_paragraph h3 {
+    font-size: 1.3em;
   }
 
-  .we_content>div {
+  .about_us_img img {
+    width: 300px !important;
+    height: 300px !important;
+  }
+
+  /* .about_us_content>div {
     flex: 0 0 48%;
     max-width: 48%;
-  }
+  } */
   
-  .we_cards h2 {
+  .about_us_cards h2 {
     font-size: 28px;
   }
 
-  .we_cards p {
+  .about_us_cards p {
     font-size: 22px;
   }
 
-  #fourth_page{
+  .actors_cards h2{
+    font-size: 22px;
+  }
+
+  #theatre_block{
     height: 700px;
     min-height: 700px;
   }
 
-  .fourth_page_heading {
+  .theatre_block_heading {
     font-size: 90px;
     padding-bottom: 30px;
     padding-left: 45px;
@@ -471,7 +525,8 @@
   }
 
   .modal-wrapper {
-    height: 99%;
+    height: 80%;
+    width: 110%;
   }
 
   .modal {
@@ -517,12 +572,12 @@
     font-size: 13px;
   }
 
-  #fifth_page {
+  #affiche_page {
     height: 1050px;
     min-height: 1050px;
   }
 
-  .fifth_page_heading {
+  .affiche_page_heading {
     font-size: 90px;
     padding-bottom: 30px;
     padding-left: 45px;
@@ -581,19 +636,23 @@
     margin-top: 30px;
   }
 
+  .afisha_action {
+    margin-left: 0;
+  }
 
-  .sixth_page_heading {
+
+  .actors_page_heading {
     font-size: 90px;
     padding-bottom: 70px;
     padding-left: 45px;
   }
 
-  #seventh_page {
+  #contacts_page {
     height: 950px;
     min-height: 950px;
   }
 
-  .seventh_page_heading {
+  .contacts_page_heading {
     font-size: 90px;
   }
 
@@ -602,6 +661,14 @@
   }
 
   .contacts_table_media {
+    display: block;
+  }
+
+  .about_us_content {
+    display: none;
+  }
+
+  .about_us_content_media {
     display: block;
   }
 
@@ -623,6 +690,10 @@
 
 
 @media screen and (min-width: 656px) and (max-width: 767px){
+  .initial_text_overlay_top{
+    top: 64px;
+  }
+
   .text{
     height: 18%;
   }
@@ -651,38 +722,53 @@
     height: 20%;
   }
 
-  #first_page h1 {
+  #initial_block h1 {
     font-size: 5.5em;
     padding: 0px 30px 0px 30px;
   }
 
-  #first_page h2 {
+  #initial_block h2 {
     font-size: 2.1em;
+  }
+
+  .initial_text_overlay_top{
+    top: 64px;
+  }
+
+  .initial_text_overlay_bottom{
+    bottom: 100px;
   }
 
   .scroll_down_text {
     font-size: 1.17em;
   }
+  .scroll_down_container{
+    text-underline-offset: 0.25em;
+  }
 
-  .second_page_overlay h3 {
+  .about_project_block_overlay h3 {
     font-size: 1.6em;
   }
 
-  #third_page {
-    height: 2250px;
-    min-height: 2250px;
+  #about_us_block {
+    height: fit-content;
+    min-height: fit-content;
   }
 
-  .third_page_heading {
+  .about_us_block_heading {
     font-size: 95px;
   }
 
-    .we_content>div {
+  .about_us_block_paragraph h3 {
+    font-size: 1.6em;
+  }
+
+    .about_us_content>div {
       flex: 0 0 48%;
       max-width: 48%;
     }
 
-  .fourth_page_heading {
+  .theatre_block_heading {
     font-size: 95px;
   }
 
@@ -716,7 +802,8 @@
   }
 
   .modal-wrapper {
-    height: 100%;
+    height: 80%;
+    width: 110%;
   }
 
   .modal {
@@ -759,11 +846,11 @@
     padding-top: 40px;
   }
 
-  .fifth_page_heading {
+  .affiche_page_heading {
     font-size: 95px;
   }
 
-  .sixth_page_heading {
+  .actors_page_heading {
     font-size: 95px;
   }
 
@@ -771,9 +858,12 @@
     padding-bottom: 20px;
   }
 
-  .seventh_page_heading {
+  .contacts_page_heading {
     font-size: 95px;
     padding-bottom: 20px;
+
+  .contacts_page_description{
+    font-size: 15px !important;
   }
 
   .table_heading {
@@ -784,7 +874,7 @@
     font-size: 15px !important;
   }
 }
-
+}
 
 @media screen and (min-width: 992px) and (max-width: 1119px) {
 
@@ -804,29 +894,42 @@
     height: 30%;
   }
 
-  #first_page h1 {
+  #initial_block h1 {
     font-size: 7em;
   }
 
-  #first_page h2 {
+  #initial_block h2 {
     font-size: 2.9em;
   }
 
-  .third_page_heading {
+  #about_us_block {
+    height: fit-content;
+    min-height: fit-content;
+  }
+
+  .about_us_block_heading {
     font-size: 105px;
   }
 
-  .we_cards h2 {
+  .about_us_cards h2 {
+    font-size: 34px;
+  }
+
+  .actors_cards h2{
     font-size: 34px;
   }
 
 
-  .fourth_page_heading {
+  .theatre_block_heading {
     font-size: 105px;
   }
 
   .scroll_down_text {
     font-size: 1.35em;
+  }  
+  
+  .scroll_down_container{
+    text-underline-offset: 0.25em;
   }
 
   #call-form {
@@ -859,7 +962,8 @@
   }
 
   .modal-wrapper {
-    height: 100%;
+    height: 80%;
+    width: 110%;
   }
 
   .modal {
@@ -902,15 +1006,15 @@
     margin-bottom: 30px;
   }
   
-  .fifth_page_heading {
+  .affiche_page_heading {
     font-size: 105px;
   }
 
-  .sixth_page_heading {
+  .actors_page_heading {
     font-size: 105px;
   }
 
-  .seventh_page_heading {
+  .contacts_page_heading {
     font-size: 105px;
   }
 }
@@ -921,11 +1025,11 @@
     height: 30%;
   }
 
-  #first_page h1 {
+  #initial_block h1 {
     font-size: 7em;
   }
 
-  #first_page h2 {
+  #initial_block h2 {
     font-size: 2.9em;
   }
 
@@ -933,7 +1037,15 @@
     font-size: 1.35em;
   }
 
-  .we_cards h2 {
+  .scroll_down_container{
+    text-underline-offset: 0.25em;
+  }
+
+  .about_us_cards h2 {
+    font-size: 34px;
+  }
+
+  .actors_cards h2{
     font-size: 34px;
   }
 
@@ -944,7 +1056,8 @@
   }
 
   .modal-wrapper {
-    height: 100%;
+    height: 80%;
+    width: 110%;
   }
 
   .modal {
@@ -961,31 +1074,57 @@
 
 
 @media screen and (max-height: 730px) {
-  #first_page{
+  #initial_block{
     min-height: 730px;
   }
 
-  #second_page{
+  #about_project_block{
     min-height: 730px;
   }
 
-  #third_page {
+  #about_us_block {
+    min-height: fit-content;
+  }
+
+  #theatre_block {
     min-height: 730px;
   }
 
-  #fourth_page {
+  #affiche_page {
     min-height: 730px;
   }
 
-  #fifth_page {
+  #actors_page {
     min-height: 730px;
   }
 
-  #sixth_page {
+  #contacts_page {
     min-height: 730px;
   }
+}
 
-  #seventh_page {
-    min-height: 730px;
+@media screen and (min-width: 1563px) and (max-width: 1793px) {
+  #about_us_block {
+    height: fit-content;
+    min-height: fit-content;
+  }
+}
+
+@media screen and (min-width: 1216px) and (max-width: 1562px) {
+  #about_us_block {
+    height: fit-content;
+    min-height: fit-content;
+  }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1900px) {
+  .initial_text_overlay_bottom{
+    bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1500px) {
+  .initial_text_overlay_bottom{
+    bottom: 50px;
   }
 }
