@@ -75,6 +75,11 @@
     text-underline-offset: 0.5em;
   }
 
+  #about_project_block {
+    height: 350px;
+    min-height: 350px;
+  }
+
   .about_project_block_overlay h3 {
     font-size: 3em;
     width: 85%;
