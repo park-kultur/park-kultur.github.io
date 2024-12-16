@@ -205,10 +205,11 @@ header{
 .initial_text_overlay_bottom {
   background-image: url('media/Pages/Page_1_OL_Bottom.webp');
   background-position: 50% 50%;
-  background-size: cover;
+  /* background-size: cover; */
+  background-size: 150%;
   width: 100%;
   aspect-ratio: 1920 / 600;
-  bottom: calc(5vh + 70px);
+  bottom: 15%;
   left: 0;
   visibility: hidden;
   z-index: 0;
