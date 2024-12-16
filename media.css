@@ -77,6 +77,7 @@
   }
   .scroll_down_container{
     text-underline-offset: 0.5em;
+    visibility: hidden;
   }
 
   #about_project_block {
@@ -381,6 +382,10 @@
 
   .initial_text_overlay_middle {
     visibility: hidden;
+  }
+
+  .tickets {
+    visibility: visible;
   }
 }
 
