@@ -261,7 +261,7 @@ header{
 .scroll_down_container{
   bottom: 5vh;
   width: 100%;
-  position: fixed;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -269,6 +269,7 @@ header{
   animation: bounce 2s infinite;
   text-decoration-color: white;
   text-underline-offset: 0.1em;
+  visibility: visible;
 }
 
 @keyframes bounce {
