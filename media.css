@@ -64,9 +64,9 @@
     top: 64px;
   }
 
-  .initial_text_overlay_bottom{
+  /* .initial_text_overlay_bottom{
     bottom: 200px;
-  } 
+  }  */
 
   .scroll_down_text{
     font-size: 2.7em;
@@ -374,6 +374,11 @@
   .fa-brands.fa-youtube {
     margin: 0px;
   }
+
+  .initial_text_overlay_middle {
+    width: 125%;
+    left: -25%;
+  }
 }
 
 @media screen and (min-width: 544px) and (max-width: 575px){
@@ -433,9 +438,9 @@
     top: 64px;
   }
 
-  .initial_text_overlay_bottom{
+  /* .initial_text_overlay_bottom{
     bottom: 125px;
-  }
+  } */
 
   .scroll_down_text{
     font-size: 1.17em;
@@ -740,9 +745,9 @@
     top: 64px;
   }
 
-  .initial_text_overlay_bottom{
+  /* .initial_text_overlay_bottom{
     bottom: 100px;
-  }
+  } */
 
   .scroll_down_text {
     font-size: 1.17em;
@@ -1123,13 +1128,13 @@
 }
 
 @media screen and (min-width: 1500px) and (max-width: 1900px) {
-  .initial_text_overlay_bottom{
-    bottom: 50px;
-  }
+  /* .initial_text_overlay_bottom{
+    bottom: 30px;
+  } */
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1500px) {
-  .initial_text_overlay_bottom{
+  /* .initial_text_overlay_bottom{
     bottom: 50px;
-  }
+  } */
 }
