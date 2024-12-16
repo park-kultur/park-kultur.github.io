@@ -208,10 +208,11 @@ header{
   background-size: cover;
   width: 100%;
   aspect-ratio: 1920 / 600;
-  position: absolute; /* Allow it to overlap */
-  bottom: calc(5vh + 35px);
+  bottom: calc(5vh + 70px);
   left: 0;
+  visibility: hidden;
   z-index: 0;
+  position: absolute; /* Allow it to overlap */
 }
 
 .text{

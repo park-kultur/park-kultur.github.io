@@ -51,6 +51,10 @@
     height: 24%;
   }
 
+  #initial_block{
+    background-image: url('media/Pages/Page_1_BG_mobile.webp');
+  }
+
   #initial_block h1 {
     font-size: 13em;
     padding: 0px 30px 0px 30px;
@@ -64,9 +68,9 @@
     top: 64px;
   }
 
-  /* .initial_text_overlay_bottom{
-    bottom: 200px;
-  }  */
+  .initial_text_overlay_bottom{
+    visibility: visible;
+  } 
 
   .scroll_down_text{
     font-size: 2.7em;
@@ -376,8 +380,7 @@
   }
 
   .initial_text_overlay_middle {
-    width: 125%;
-    left: -25%;
+    visibility: hidden;
   }
 }
 
