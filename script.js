@@ -180,6 +180,33 @@ window.addEventListener("keydown", function (event) {
   }
 })
 
+// Modal windows #3
+
+const callFromBtn3 = document.getElementById("call-form-3")
+const modalCallForm3 = document.getElementById("modal-call-form-3")
+
+callFromBtn3.addEventListener("click", function () {
+  modalCallForm3.classList.add("modal-parent--open");
+  lockScroll();
+})
+
+modalCallForm3.querySelector(".modal").addEventListener("click", function (event) {
+  event._isClick = true
+})
+modalCallForm3.addEventListener("click", function (event) {
+  if (event._isClick === true) return
+  modalCallForm3.classList.remove("modal-parent--open");
+  unlockScroll();
+})
+
+window.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    modalCallForm3.classList.remove("modal-parent--open")
+  }
+})
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const originalParent = document.querySelector('.contact_info_1');
     const mediaLinks1 = document.getElementById('media_links_1');

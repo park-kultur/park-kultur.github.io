@@ -195,24 +195,23 @@ header{
   background-position: 50% 50%;
   background-size: cover;
   width: 100%;
-  aspect-ratio: 1920 / 1200;
+  aspect-ratio: 1080 / 1920;
   position: absolute; /* Allow it to overlap */
   bottom: 50%;
   transform: translateY(50%);
   left: 0;
   z-index: 0;
+  visibility: hidden;
 }
 
 .initial_text_overlay_bottom {
   background-image: url('media/Pages/Page_1_OL_Bottom.webp');
   background-position: 50% 50%;
-  /* background-size: cover; */
-  background-size: 150%;
+  background-size: cover;
   width: 100%;
   aspect-ratio: 1920 / 600;
-  bottom: 15%;
+  bottom: 0;
   left: 0;
-  visibility: hidden;
   z-index: 0;
   position: absolute; /* Allow it to overlap */
 }
@@ -477,8 +476,8 @@ header{
 /* ---------- theatre_block --------- */
 
 #theatre_block {
-  height: 950px;
-  min-height: 950px;
+  height: fit-content;
+  min-height: fit-content;
   /* background-image: url('media/Pages/Page_7_BG.webp'); */
   background-color: black;
   background-position: 50% 50%;
@@ -499,6 +498,8 @@ header{
 /* модальное окно №1 */
 
 .our_shows {
+  height: fit-content;
+  min-height: fit-content;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -663,6 +664,20 @@ p.modal_text {
 }
 
 .btn-reset_2 {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#call-form-3 {
+  /* font-family: "Hero-regular";
+  font-size: 2em; */
+  width: 350px;
+  height: max-content;
+}
+
+.btn-reset_3 {
   border: none;
   padding: 0;
   background-color: transparent;
