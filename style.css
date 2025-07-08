@@ -35,6 +35,7 @@
 
 :root {
   --app-height: 100vh;
+  --app-width: 100vw;
 }
 
 * {
@@ -43,10 +44,14 @@
   box-sizing: border-box;
 }
 
+html {
+  width: var(--app-width);
+  overflow-x: hidden;
+}
+
 body{
   margin: 0px;
   width: 100%;
-  overflow-x: hidden;
 }
 
 /* ---------- Header --------- */
@@ -55,7 +60,7 @@ header{
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
-  width: 100%;
+  width: var(--app-width);
   position: fixed;
   z-index: 1000;
 }
