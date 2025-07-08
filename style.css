@@ -157,7 +157,7 @@ header{
 
 #initial_block{
   position: relative;
-  background-image: url('media/Pages/Page_1_BG.webp');
+  background-image: url('media/Pages/Page_1_BG_VS.webp');
   background-position: 50% 50%;
   background-size: cover;
   height: var(--app-height);
@@ -178,8 +178,16 @@ header{
   display: block;
 }
 
+.initial_text_overlay_top_filling{
+  width: 100%;
+  top: 0;
+  height: 0;
+  background-color: black;
+  position: absolute; /* Allow it to overlap */
+}
+
 .initial_text_overlay_top {
-  background-image: url('media/Pages/Page_1_OL_Top.webp');
+  background-image: url('media/Pages/Page_1_OL_Top_VS.webp');
   background-position: 50% 50%;
   background-size: cover;
   width: 100%;
@@ -205,7 +213,7 @@ header{
 }
 
 .initial_text_overlay_bottom {
-  background-image: url('media/Pages/Page_1_OL_Bottom.webp');
+  background-image: url('media/Pages/Page_1_OL_Bottom_VS.webp');
   background-position: 50% 50%;
   background-size: cover;
   width: 100%;
@@ -213,6 +221,14 @@ header{
   bottom: 0;
   left: 0;
   z-index: 0;
+  position: absolute; /* Allow it to overlap */
+}
+
+.initial_text_overlay_bottom_filling {
+  width: 100%;
+  bottom: 0;
+  height: 0;
+  background-color: black;
   position: absolute; /* Allow it to overlap */
 }
 
@@ -799,6 +815,11 @@ p.modal_text {
 .afisha_ticket{
   color: white;
   border: 1px solid white;
+}
+
+a.disabled {
+  pointer-events: none;
+  color: gray;
 }
 
 /* ---------- /affiche_page --------- */

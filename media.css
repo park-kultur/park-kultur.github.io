@@ -52,7 +52,7 @@
   }
 
   #initial_block{
-    background-image: url('media/Pages/Page_1_BG_mobile.webp');
+    background-image: url('media/Pages/Page_1_BG_VS_mobile.webp');
   }
 
   #initial_block h1 {
@@ -64,6 +64,11 @@
     font-size: 3.8em;
   }
 
+  .initial_text_overlay_top_filling{
+    height: 64px;
+    background-color: black;
+  }
+
   .initial_text_overlay_top{
     top: 64px;
   }
@@ -71,6 +76,11 @@
   .initial_text_overlay_bottom{
     visibility: visible;
   } 
+
+  .initial_text_overlay_bottom_filling{
+    height: 0;
+    background-color: black;
+  }
 
   .scroll_down_text{
     font-size: 2.7em;
@@ -388,22 +398,32 @@
     margin: 0px;
   }
 
-  
+  .initial_text_overlay_top_filling{
+    height: 0;
+    background-color: black;
+  }
+
   .initial_text_overlay_top {
-    visibility: hidden;
+    visibility: visible;
   }
 
   .initial_text_overlay_middle {
-    visibility: visible;
+    visibility: hidden;
   }
 
   
   .initial_text_overlay_bottom {
-    visibility: hidden;
+    visibility: visible;
+    bottom: 15%;
+  }
+
+  .initial_text_overlay_bottom_filling{
+    height: 15%;
+    background-color: black;
   }
 
   .tickets {
-    visibility: visible;
+    /* visibility: visible; */
   }
 }
 
