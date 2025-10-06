@@ -1030,6 +1030,13 @@ a.disabled {
   margin-right: 10px;
 }
 
+.icon {
+  height: 45px;
+  margin-right: 10px;
+  fill: var(--contacts-color);
+  vertical-align: bottom;
+}
+
 .social_links a {
   text-decoration: none;
 }
