@@ -190,6 +190,11 @@
     padding-left: 0%;
   }
 
+  .show_poster_button {
+    width: 260px;
+    max-width: 80vw;
+  }
+
   .modal-parent {
     padding-top: 0px;
     height: 100%;
@@ -391,10 +396,6 @@
 
   .fa-brands {
     font-size: 45px;
-  }
-
-  .fa-brands.fa-youtube {
-    margin: 0px;
   }
 
   .initial_text_overlay_top_filling{
