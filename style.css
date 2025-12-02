@@ -187,7 +187,7 @@ header{
 
 #initial_part{
   position: relative;
-  background-image: url('media/parts/inital/VS/background_desktop.webp');
+  background-image: url('media/parts/inital/FF/background_desktop.webp');
   background-position: 50% 50%;
   background-size: cover;
   height: var(--app-height);
@@ -217,37 +217,34 @@ header{
 }
 
 .initial_text_overlay_top {
-  background-image: url('media/parts/inital/VS/overlay_top.webp');
+  background-image: url('media/parts/inital/FF/overlay_top.webp');
   background-position: 50% 50%;
   background-size: cover;
   width: 100%;
-  aspect-ratio: 1920 / 600;
+  aspect-ratio: 1920 / 256;
   position: absolute; /* Allow it to overlap */
-  top: 0;
+  top: 3.16em;
   left: 0;
   z-index: 0;
 }
 
 .initial_text_overlay_middle {
-  /* background-image: url('media/parts/Page_1_OL_Middle.webp'); */
+  background-image: url('media/parts/inital/FF/overlay_middle.webp');
   background-position: 50% 50%;
   background-size: cover;
-  width: 100%;
-  aspect-ratio: 1080 / 1920;
   position: absolute; /* Allow it to overlap */
-  bottom: 50%;
-  transform: translateY(50%);
-  left: 0;
-  z-index: 0;
-  visibility: hidden;
+  height: var(--app-height);
+  min-height: var(--app-height);
+  width: 100%;
+  z-index: 1;
 }
 
 .initial_text_overlay_bottom {
-  background-image: url('media/parts/inital/VS/overlay_bottom.webp');
+  background-image: url('media/parts/inital/FF/overlay_bottom.webp');
   background-position: 50% 50%;
   background-size: cover;
   width: 100%;
-  aspect-ratio: 1920 / 600;
+  aspect-ratio: 1920 / 444;
   bottom: 0;
   left: 0;
   z-index: 0;
@@ -315,7 +312,7 @@ header{
   animation: bounce 2s infinite;
   text-decoration-color: white;
   text-underline-offset: 0.1em;
-  visibility: visible;
+  visibility: hidden;
 }
 
 @keyframes bounce {

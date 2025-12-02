@@ -51,7 +51,12 @@
   }
 
   #initial_part{
-    background-image: url('media/parts/inital/VS/background_mobile.webp');
+    /* background-image: url('media/parts/inital/FF/background_mobile.webp'); */
+    background-position: 70% 50%;
+  }
+
+  .initial_text_overlay_middle{
+    visibility: hidden;
   }
 
   #initial_part h1 {
@@ -64,7 +69,7 @@
   }
 
   .initial_text_overlay_top_filling{
-    height: 64px;
+    height: 3.16em;
     background-color: black;
   }
 
@@ -407,11 +412,6 @@
     visibility: visible;
   }
 
-  .initial_text_overlay_middle {
-    visibility: hidden;
-  }
-
-  
   .initial_text_overlay_bottom {
     visibility: visible;
     bottom: 15%;
@@ -1156,6 +1156,10 @@
 
 @media screen and (max-height: 730px) {
   #initial_part{
+    min-height: 730px;
+  }
+
+  .initial_text_overlay_middle{
     min-height: 730px;
   }
 
