@@ -1,17 +1,17 @@
 export const afishaData = [
   {
     day: '13',
-    month: 'Октября',
-    title: 'Вишнёвый сад (16+)',
-    time: 'пн 19:00',
-    ticketUrl: 'https://iframeab-pre8338.intickets.ru/seance/63691857',
+    month: 'Января',
+    title: 'Фантазии Фарятьева (16+)',
+    time: 'вт 19:00',
+    // ticketUrl: 'https://iframeab-pre8338.intickets.ru/seance/63691857',
   },
   {
     day: '14',
-    month: 'Октября',
-    title: 'Вишнёвый сад (16+)',
-    time: 'вт 19:00',
-    ticketUrl: 'https://iframeab-pre8338.intickets.ru/seance/63692635',
+    month: 'Января',
+    title: 'Фантазии Фарятьева (16+)',
+    time: 'ср 19:00',
+    // ticketUrl: 'https://iframeab-pre8338.intickets.ru/seance/63692635',
   },
 ];
 
@@ -61,10 +61,15 @@ export function renderAfisha() {
     action.className = 'afisha_action';
 
     const ticketLink = document.createElement('a');
-    ticketLink.className = 'buy_ticket afisha_ticket';
-    ticketLink.href = ticketUrl;
-    ticketLink.target = '_blank';
-    ticketLink.textContent = 'Купить билет';
+    if (ticketUrl) {
+      ticketLink.className = 'buy_ticket afisha_ticket';
+      ticketLink.href = ticketUrl;
+      ticketLink.target = '_blank';
+      ticketLink.textContent = 'Купить билет';
+    } else {
+      ticketLink.className = 'buy_ticket afisha_ticket disabled';
+      ticketLink.textContent = 'Скоро в продаже';
+    }
 
     action.append(ticketLink);
     eventEl.append(description, action);
