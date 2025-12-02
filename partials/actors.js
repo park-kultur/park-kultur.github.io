@@ -40,7 +40,7 @@ export function renderActorsGallery() {
     const img = document.createElement('img');
     img.src = image;
     img.alt = fullName;
-    img.className = 'actor_card_image image-square theatre_block_images';
+    img.className = 'actor_card_image image-square theatre_part_images';
 
     const title = document.createElement('h2');
     title.innerHTML = `${firstName}<br>${lastName}`;

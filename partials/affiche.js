@@ -47,7 +47,7 @@ export function renderAfisha() {
 
     const titleLink = document.createElement('a');
     titleLink.className = 'button nav_link afisha_title afisha_text';
-    titleLink.href = '#theatre_block';
+    titleLink.href = '#theatre_part';
     titleLink.textContent = title;
 
     const timeEl = document.createElement('div');
