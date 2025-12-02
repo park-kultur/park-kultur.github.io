@@ -187,7 +187,7 @@ header{
 
 #initial_part{
   position: relative;
-  background-image: url('media/Pages/Page_1_BG_VS.webp');
+  background-image: url('media/parts/inital/VS/background_desktop.webp');
   background-position: 50% 50%;
   background-size: cover;
   height: var(--app-height);
@@ -217,7 +217,7 @@ header{
 }
 
 .initial_text_overlay_top {
-  background-image: url('media/Pages/Page_1_OL_Top_VS.webp');
+  background-image: url('media/parts/inital/VS/overlay_top.webp');
   background-position: 50% 50%;
   background-size: cover;
   width: 100%;
@@ -229,7 +229,7 @@ header{
 }
 
 .initial_text_overlay_middle {
-  background-image: url('media/Pages/Page_1_OL_Middle.webp');
+  /* background-image: url('media/parts/Page_1_OL_Middle.webp'); */
   background-position: 50% 50%;
   background-size: cover;
   width: 100%;
@@ -243,7 +243,7 @@ header{
 }
 
 .initial_text_overlay_bottom {
-  background-image: url('media/Pages/Page_1_OL_Bottom_VS.webp');
+  background-image: url('media/parts/inital/VS/overlay_bottom.webp');
   background-position: 50% 50%;
   background-size: cover;
   width: 100%;
@@ -366,7 +366,7 @@ header{
 }
 
 .tickets {
-  background-image: url('media/Pages/Ticket.webp');
+  background-image: url('media/parts/inital/ticket.webp');
   background-position: 50% 50%;  
   background-size: contain;
   background-repeat: no-repeat;
@@ -390,7 +390,7 @@ header{
 /* ---------- about_project_part --------- */
 
 #about_project_part {
-  background-image: url('media/Pages/Page_2_BG.webp');
+  background-image: url('media/parts/about-project/background.webp');
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
@@ -428,7 +428,7 @@ header{
 #about_us_part {
   height: fit-content;
   min-height: fit-content;
-  background-image: url('media/Pages/Page_3_BG.webp');
+  background-image: url('media/parts/about-us/background.webp');
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
@@ -525,7 +525,7 @@ header{
 #theatre_part {
   height: fit-content;
   min-height: fit-content;
-  /* background-image: url('media/Pages/Page_7_BG.webp'); */
+  /* background-image: url('media/parts/theatre/background.webp'); */
   background-color: black;
   background-position: 50% 50%;
   background-size: cover;
@@ -755,7 +755,7 @@ p.modal_text {
   height: 800px;
   min-height: 800px;
   width: 100%;
-  background-image: url('media/Pages/Page_6_BG.webp');
+  background-image: url('media/parts/affiche/background.webp');
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
@@ -852,7 +852,7 @@ a.disabled {
 #actors_part {
   height: 1000px;
   min-height: 1000px;
-  background-image: url('media/Pages/Page_8_BG.webp');
+  background-image: url('media/parts/actors/background.webp');
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
@@ -943,7 +943,7 @@ a.disabled {
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  background-image: url('media/Pages/Page_9_BG.webp');
+  background-image: url('media/parts/footer/background.webp');
   background-position: 50% 50%;
   background-size: cover;
   position: relative;

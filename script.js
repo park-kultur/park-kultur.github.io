@@ -1,11 +1,11 @@
-﻿import { initNavigation } from './partials/header.js';
-import { renderAboutUs } from './partials/about-us.js';
-import { renderActorsGallery } from './partials/actors.js';
-import { renderAfisha } from './partials/affiche.js';
-import { renderShows, getShowSwiperConfigs } from './partials/theatre.js';
-import { renderContacts, initContactMediaLinks } from './partials/footer.js';
+﻿import { initNavigation } from './parts/header.js';
+import { renderAboutUs } from './parts/about-us.js';
+import { renderActorsGallery } from './parts/actors.js';
+import { renderAfisha } from './parts/affiche.js';
+import { renderShows, getShowSwiperConfigs } from './parts/theatre.js';
+import { renderContacts, initContactMediaLinks } from './parts/footer.js';
 
-async function loadPartials() {
+async function loadparts() {
   const includeTargets = Array.from(document.querySelectorAll('[data-include]'));
 
   for (const target of includeTargets) {
@@ -29,7 +29,7 @@ async function loadPartials() {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  await loadPartials();
+  await loadparts();
   initAttentionTitle();
   initNavigation();
   renderAboutUs();
