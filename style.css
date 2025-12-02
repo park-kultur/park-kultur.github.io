@@ -1,37 +1,17 @@
-/* Mak bold */
-@font-face{
-  font-family: 'Mak-bold';
-  src: url('park_fonts/mak-bold.otf') format('opentype');
+/* NAMU Heading */
+@font-face {
+  font-family: 'NAMU-heading';
+  src: url('park_fonts/NAMU-1400.otf') format('opentype');
   font-weight: bold;
 }
 
-/* Mak light */
+/* NAMU Paragraph */
 @font-face {
-  font-family: 'Mak-light';
-  src: url('park_fonts/mak-light.otf') format('opentype');
-  font-weight: 300;
-}
-
-/* Hero Bold */
-@font-face {
-  font-family: 'Hero-bold';
-  src: url('park_fonts/Hero-Bold.otf') format('opentype');
+  font-family: 'NAMU-paragraph';
+  src: url('park_fonts/NAMU-1990.otf') format('opentype');
   font-weight: bold;
 }
 
-/* Hero Light */
-@font-face {
-  font-family: 'Hero-light';
-  src: url('park_fonts/Hero-Light.otf') format('opentype');
-  font-weight: 300;
-}
-
-/* Hero Regular */
-@font-face {
-  font-family: 'Hero-regular';
-  src: url('park_fonts/Hero-Regular.otf') format('opentype');
-  font-weight: normal;
-}
 
 :root {
   --app-height: 100vh;
@@ -149,7 +129,7 @@ header{
   transition: 0.15s ease-in-out;
   position: relative;
   margin: 0 0.625em;
-  font-family: 'Hero-regular';
+  font-family: 'NAMU-paragraph';
   height: 4em;
   display: flex;
   justify-content: center;
@@ -303,14 +283,14 @@ header{
 #initial_part h1{
   font-size: 8.5em;
   margin: 0px;
-  font-family: 'Mak-bold';
+  font-family: 'NAMU-heading';
   color: white;
   line-height: 0.9;
 }
 
 #initial_part h2 {
   font-size: 3.8em;
-  font-family: 'Hero-light';
+  font-family: 'NAMU-paragraph';
   color: white;
   line-height: 0.95;
   margin: 0px;
@@ -378,7 +358,7 @@ header{
 
 .scroll_down_text{
   font-size: 1.5em;
-  font-family: 'Hero-regular';
+  font-family: 'NAMU-paragraph';
   color: white;
   margin: 0px;
   text-align: center;
@@ -434,7 +414,7 @@ header{
   width: 55%;
   text-align: center;
   color: white;
-  font-family: 'Hero-light';
+  font-family: 'NAMU-paragraph';
   font-size: 1.5em;
   padding: 1.25px;
 }
@@ -455,11 +435,12 @@ header{
 }
 
 .about_us_part_heading{
-  font-family: 'Mak-bold';
+  font-family: 'NAMU-heading';
   font-size: 7em;
   margin: 0px;
   padding: 75px 0px 43px 75px;
   color: white;
+  text-transform: uppercase;
 }
 
 .about_us_part_paragraph {
@@ -478,7 +459,7 @@ header{
   width: 55%;
   /* text-align: center; */
   color: white;
-  font-family: 'Hero-light';
+  font-family: 'NAMU-paragraph';
   font-size: 1.5em;
   padding: 1.25px;
   padding-bottom: 75px;
@@ -509,7 +490,7 @@ header{
 }
 
 .about_us_cards h2{
-  font-family: 'Mak-bold';
+  font-family: 'NAMU-paragraph';
   color: white;
   font-size: 2.6rem;
   margin: 30px 0 5px;
@@ -517,7 +498,7 @@ header{
 }
 
 .about_us_cards p {
-  font-family: 'Hero-light';
+  font-family: 'NAMU-paragraph';
   color: white;
   font-size: 1.5rem;
   text-align: center;
@@ -553,11 +534,12 @@ header{
 }
 
 .theatre_part_heading {
-  font-family: 'Mak-bold';
+  font-family: 'NAMU-heading';
   font-size: 7em;
   margin: 0px;
   padding: 75px 0px 70px 75px;
   color: white;
+  text-transform: uppercase;
 }
 
 
@@ -575,7 +557,7 @@ header{
 }
 
 #call-form {
-  /* font-family: "Hero-regular";
+  /* font-family: "NAMU-paragraph";
   font-size: 2em; */
   width: 350px;
   height: max-content;
@@ -697,7 +679,7 @@ header{
   margin: 0;
   margin-bottom: 30px;
   text-align: start;
-  font-family: "Hero-regular";
+  font-family: "NAMU-paragraph";
 }
 
 h2.modal_title {
@@ -705,7 +687,7 @@ h2.modal_title {
 }
 
 .modal_text {
-  font-family: "Hero-regular";
+  font-family: "NAMU-paragraph";
   width: 100%;
   margin-bottom: 20px;
   text-align: start;
@@ -716,7 +698,7 @@ p.modal_text {
 }
 
 .buy_ticket {
-  font-family: "Hero-regular";
+  font-family: "NAMU-paragraph";
   border-radius: 5px;
   border: 1px solid black;
   padding: 7px;
@@ -725,14 +707,14 @@ p.modal_text {
 }
 
 #call-form-2 {
-  /* font-family: "Hero-regular";
+  /* font-family: "NAMU-paragraph";
   font-size: 2em; */
   width: 350px;
   height: max-content;
 }
 
 #call-form-3 {
-  /* font-family: "Hero-regular";
+  /* font-family: "NAMU-paragraph";
   font-size: 2em; */
   width: 350px;
   height: max-content;
@@ -780,10 +762,11 @@ p.modal_text {
 }
 
 .affiche_part_heading {
-  font-family: 'Mak-bold';
+  font-family: 'NAMU-heading';
   font-size: 7em;
   color: white;
   padding: 75px 0px 120px 75px;
+  text-transform: uppercase;
 }
 
 .afisha{
@@ -822,7 +805,7 @@ p.modal_text {
 
 .afisha_text{
   color: white;
-  font-family: "Hero-regular";
+  font-family: "NAMU-paragraph";
 }
 
 .afisha_month {
@@ -876,10 +859,11 @@ a.disabled {
 }
 
 .actors_part_heading {
-  font-family: 'Mak-bold';
+  font-family: 'NAMU-heading';
   font-size: 7em;
   color: white;
   padding: 75px 0px 91px 75px;
+  text-transform: uppercase;
 }
 
 .actors_gallery_content {
@@ -899,7 +883,7 @@ a.disabled {
 }
 
 .actors_cards h2{
-  font-family: 'Mak-bold';
+  font-family: 'NAMU-paragraph';
   color: white;
   font-size: 2.6rem;
   margin: 30px 0 5px;
@@ -976,14 +960,15 @@ a.disabled {
 }
 
 .contacts_part_heading {
-  font-family: 'Mak-bold';
+  font-family: 'NAMU-heading';
   font-size: 7em;
   margin: 0px;
   color: var(--contacts-color);
+  text-transform: uppercase;
 }
 
 .contacts_part_description{
-  font-family: 'Hero-regular';
+  font-family: 'NAMU-paragraph';
   color: var(--contacts-color);
   font-size: 1em;
   text-align: start;
@@ -1016,13 +1001,13 @@ a.disabled {
 
 .table_heading {
   width: 250px !important;
-  font-family: 'Hero-bold' !important;
+  font-family: 'NAMU-paragraph' !important;
   text-align: start !important;
   color: var(--contacts-color) !important;
 }
 
 .contact_person {
-  font-family: 'Hero-regular';
+  font-family: 'NAMU-paragraph';
   color: var(--contacts-color);
   font-size: 1em;
   text-align: start;
