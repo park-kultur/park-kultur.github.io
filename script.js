@@ -1,239 +1,200 @@
-// burger menu
+﻿import { initNavigation } from './parts/header.js';
+import { renderAboutUs } from './parts/about-us.js';
+import { renderActorsGallery } from './parts/actors.js';
+import { renderAfisha } from './parts/affiche.js';
+import { renderShows, getShowSwiperConfigs } from './parts/theatre.js';
+import { renderContacts, initContactMediaLinks } from './parts/footer.js';
 
-document.addEventListener('DOMContentLoaded', function () {
-  let headerHeight = document.querySelector('header').offsetHeight;
-  
-window.addEventListener('resize', function () {
-  // Обновляем значение headerHeight при изменении размеров окна
-  headerHeight = document.querySelector('header').offsetHeight;
-  });
+async function loadparts() {
+  const includeTargets = Array.from(document.querySelectorAll('[data-include]'));
 
-const navLinks = document.querySelectorAll('.nav_link');
+  for (const target of includeTargets) {
+    const url = target.getAttribute('data-include');
 
-navLinks.forEach(function (link) {
-  link.addEventListener('click', function (event) {
-    event.preventDefault();
+    if (!url) continue;
 
-    const targetId = this.getAttribute('href').substring(1);
-    const targetElement = document.getElementById(targetId);
+    try {
+      const response = await fetch(url);
 
-    if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop - 0,
-        behavior: 'smooth'
-      });
-    }
+      if (!response.ok) {
+        throw new Error(`Failed to load partial "${url}" (${response.status})`);
+      }
 
-    // Закрываем меню, если оно открыто
-    document.getElementById('check').checked = false;
-  });
-  });
-});
-
-
-
-// galleries
-
-const first_swiper = new Swiper("#first_swiper", {
-  loop: true,
-  freeMode: true,
-
-  navigation: {
-    prevEl: "#first_swiper_prev",
-    nextEl: "#first_swiper_next"
-  },
-
-  breakpoints: {
-    1120: {
-      slidesPerView: 3,
-    },  
-    800: {
-      slidesPerView: 2,
-    },
-    600: {
-      slidesPerView: 1,
-    }
-
-  }
-});
-
-const second_swiper = new Swiper("#second_swiper", {
-  loop: true,
-  freeMode: true,
-
-
-  slidesPerView: 1,
-
-
-  navigation: {
-    prevEl: "#second_swiper_prev",
-    nextEl: "#second_swiper_next",
-  }
-});
-
-const third_swiper = new Swiper("#third_swiper", {
-  loop: true,
-  freeMode: true,
-
-  slidesPerView: 1,
-
-
-  navigation: {
-    prevEl: "#third_swiper_prev",
-    nextEl: "#third_swiper_next"
-  }
-
-});
-
-
-const fourth_swiper = new Swiper("#fourth_swiper", {
-  loop: true,
-  freeMode: true,
-
-  navigation: {
-    prevEl: "#fourth_swiper_prev",
-    nextEl: "#fourth_swiper_next"
-  },
-
-  breakpoints: {
-    1230: {
-      slidesPerView: 3,
-    },
-    900: {
-      slidesPerView: 2,
-    },
-    600: {
-      slidesPerView: 1,
+      const html = await response.text();
+      target.outerHTML = html;
+    } catch (error) {
+      console.error(`Could not load partial ${url}`, error);
     }
   }
-});
-
-
-
-// Modal windows #1
-
-let scrollPosition = 0;
-
-function lockScroll() {
-  scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-  document.body.style.overflow = 'hidden';
-  document.body.style.position = 'fixed';
-  document.body.style.top = `-${scrollPosition}px`;
-  document.body.style.width = '100%';
 }
 
-function unlockScroll() {
-  document.body.style.overflow = '';
-  document.body.style.position = '';
-  document.body.style.top = '';
-  document.body.style.width = '';
-  window.scrollTo(0, scrollPosition);
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadparts();
+  initAttentionTitle();
+  initNavigation();
+  renderAboutUs();
+  renderActorsGallery();
+  renderAfisha();
+  renderShows();
+  renderContacts();
+  initSwipers();
+  initModals();
+  initContactMediaLinks();
+  initViewportSizeVars();
+});
+
+function initAttentionTitle() {
+  const pageTitle = document.title;
+  const attentionMessage = 'Куда же вы!';
+
+  document.addEventListener('visibilitychange', () => {
+    document.title = document.hidden ? attentionMessage : pageTitle;
+  });
 }
 
-const callFromBtn = document.getElementById("call-form")
-const modalCallForm = document.getElementById("modal-call-form")
-
-callFromBtn.addEventListener("click", function () {
-  modalCallForm.classList.add("modal-parent--open");
-  lockScroll();
-})
-
-modalCallForm.querySelector(".modal").addEventListener("click", function (event) {
-  event._isClick = true
-})
-modalCallForm.addEventListener("click", function (event) {
-  if (event._isClick === true) return
-  modalCallForm.classList.remove("modal-parent--open");
-  unlockScroll();
-})
-
-window.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    modalCallForm.classList.remove("modal-parent--open")
+function initSwipers() {
+  if (typeof Swiper === 'undefined') {
+    return;
   }
-})
 
+  const swiperConfigs = [
+    {
+      selector: '#first_swiper',
+      options: {
+        loop: true,
+        freeMode: true,
+        slidesPerView: 1,
+        navigation: {
+          prevEl: '#first_swiper_prev',
+          nextEl: '#first_swiper_next',
+        },
+        breakpoints: {
+          600: { slidesPerView: 1 },
+          800: { slidesPerView: 2 },
+          1120: { slidesPerView: 3 },
+        },
+      },
+    },
+    {
+      selector: '#about_us_swiper',
+      options: {
+        loop: true,
+        freeMode: true,
+        slidesPerView: 1,
+        navigation: {
+          prevEl: '#about_us_swiper_prev',
+          nextEl: '#about_us_swiper_next',
+        },
+      },
+    },
+    {
+      selector: '#fourth_swiper',
+      options: {
+        loop: true,
+        freeMode: true,
+        slidesPerView: 1,
+        navigation: {
+          prevEl: '#fourth_swiper_prev',
+          nextEl: '#fourth_swiper_next',
+        },
+        breakpoints: {
+          600: { slidesPerView: 1 },
+          900: { slidesPerView: 2 },
+          1230: { slidesPerView: 3 },
+        },
+      },
+    },
+    ...getShowSwiperConfigs(),
+  ];
 
-
-// Modal windows #2
-
-const callFromBtn2 = document.getElementById("call-form-2")
-const modalCallForm2 = document.getElementById("modal-call-form-2")
-
-callFromBtn2.addEventListener("click", function () {
-  modalCallForm2.classList.add("modal-parent--open");
-  lockScroll();
-})
-
-modalCallForm2.querySelector(".modal").addEventListener("click", function (event) {
-  event._isClick = true
-})
-modalCallForm2.addEventListener("click", function (event) {
-  if (event._isClick === true) return
-  modalCallForm2.classList.remove("modal-parent--open");
-  unlockScroll();
-})
-
-window.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    modalCallForm2.classList.remove("modal-parent--open")
-  }
-})
-
-// Modal windows #3
-
-const callFromBtn3 = document.getElementById("call-form-3")
-const modalCallForm3 = document.getElementById("modal-call-form-3")
-
-callFromBtn3.addEventListener("click", function () {
-  modalCallForm3.classList.add("modal-parent--open");
-  lockScroll();
-})
-
-modalCallForm3.querySelector(".modal").addEventListener("click", function (event) {
-  event._isClick = true
-})
-modalCallForm3.addEventListener("click", function (event) {
-  if (event._isClick === true) return
-  modalCallForm3.classList.remove("modal-parent--open");
-  unlockScroll();
-})
-
-window.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    modalCallForm3.classList.remove("modal-parent--open")
-  }
-})
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const originalParent = document.querySelector('.contact_info_1');
-    const mediaLinks1 = document.getElementById('media_links_1');
-    const targetContainer = document.querySelector('.media_links_2');
-    let hasMoved = false; 
-
-    function checkWindowSize() {
-        if (window.innerWidth >= 1 && window.innerWidth <= 767 && !hasMoved) {
-            if (mediaLinks1 && targetContainer) {
-                targetContainer.appendChild(mediaLinks1);
-                hasMoved = true;
-            }
-        } else if ((window.innerWidth < 1 || window.innerWidth > 767) && hasMoved) {
-            if (mediaLinks1 && originalParent) {
-                originalParent.appendChild(mediaLinks1);
-                hasMoved = false;
-            }
-        }
+  swiperConfigs.forEach(({ selector, options }) => {
+    if (document.querySelector(selector)) {
+      new Swiper(selector, options);
     }
+  });
+}
 
-    window.addEventListener('resize', checkWindowSize);
-    checkWindowSize();
-});
+function initModals() {
+  const locker = createScrollLocker();
+  const modalControllers = Array.from(document.querySelectorAll('.modal-parent'))
+    .map((modalParent) => setupModal(modalParent, locker))
+    .filter(Boolean);
 
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      modalControllers.forEach(({ close }) => close());
+    }
+  });
+}
 
-document.addEventListener("DOMContent-Loaded", function () {
-  var initialHeight = window.innerHeight + "px"
-  
-  document.documentElement.style.set-Property("--app-height", initialHeight);
-});
+function setupModal(modalParent, locker) {
+  const modalContent = modalParent?.querySelector('.modal');
+  const triggers = Array.from(
+    document.querySelectorAll(`[data-modal-target="${modalParent.id}"]`),
+  );
+
+  if (!modalContent || triggers.length === 0) return null;
+
+  let isOpen = false;
+
+  const open = () => {
+    if (isOpen) return;
+    modalParent.classList.add('modal-parent--open');
+    locker.lock();
+    isOpen = true;
+  };
+
+  const close = () => {
+    if (!isOpen) return;
+    modalParent.classList.remove('modal-parent--open');
+    locker.unlock();
+    isOpen = false;
+  };
+
+  triggers.forEach((trigger) => trigger.addEventListener('click', open));
+  modalContent.addEventListener('click', (event) => event.stopPropagation());
+  modalParent.addEventListener('click', (event) => {
+    if (!modalContent.contains(event.target)) {
+      close();
+    }
+  });
+
+  return { close };
+}
+
+function createScrollLocker() {
+  let scrollPosition = 0;
+  let locked = false;
+
+  return {
+    lock() {
+      if (locked) return;
+      scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollPosition}px`;
+      document.body.style.width = '100%';
+      locked = true;
+    },
+    unlock() {
+      if (!locked) return;
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollPosition);
+      locked = false;
+    },
+  };
+}
+
+function initViewportSizeVars() {
+  const root = document.documentElement;
+  const updateVars = () => {
+    root.style.setProperty('--app-height', `${window.innerHeight}px`);
+    root.style.setProperty('--app-width', `${window.innerWidth}px`);
+  };
+
+  window.addEventListener('resize', updateVars);
+  updateVars();
+}

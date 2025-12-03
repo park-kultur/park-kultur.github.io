@@ -1,37 +1,17 @@
-/* Mak bold */
-@font-face{
-  font-family: 'Mak-bold';
-  src: url('park_fonts/mak-bold.otf') format('opentype');
+/* NAMU Heading */
+@font-face {
+  font-family: 'NAMU-heading';
+  src: url('park_fonts/NAMU-1400.otf') format('opentype');
   font-weight: bold;
 }
 
-/* Mak light */
+/* NAMU Paragraph */
 @font-face {
-  font-family: 'Mak-light';
-  src: url('park_fonts/mak-light.otf') format('opntype');
-  font-weight: 300;
-}
-
-/* Hero Bold */
-@font-face {
-  font-family: 'Hero-bold';
-  src: url('park_fonts/Hero-Bold.otf') format('opentype');
+  font-family: 'NAMU-paragraph';
+  src: url('park_fonts/NAMU-1990.otf') format('opentype');
   font-weight: bold;
 }
 
-/* Hero Light */
-@font-face {
-  font-family: 'Hero-light';
-  src: url('park_fonts/Hero-Light.otf') format('opentype');
-  font-weight: 300;
-}
-
-/* Hero Regular */
-@font-face {
-  font-family: 'Hero-regular';
-  src: url('park_fonts/Hero-Regular.otf') format('opentype');
-  font-weight: normal;
-}
 
 :root {
   --app-height: 100vh;
@@ -52,6 +32,50 @@ html {
 body{
   margin: 0px;
   width: 100%;
+}
+
+/* ---------- Utilities --------- */
+.image-circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  pointer-events: none;
+}
+
+.image-square {
+  width: 100%;
+  max-width: 375px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  pointer-events: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.poster_image {
+  display: block;
+  width: 100%;
+}
+
+.show_poster_button {
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+}
+
+.modal_card_image {
+  width: 100%;
+  height: 100%;
+  max-height: 414px;
+  object-fit: cover;
+  object-position: center center;
+  pointer-events: none;
+}
+
+.modal_card_image--top {
+  object-position: center 45%;
 }
 
 /* ---------- Header --------- */
@@ -105,7 +129,7 @@ header{
   transition: 0.15s ease-in-out;
   position: relative;
   margin: 0 0.625em;
-  font-family: 'Hero-regular';
+  font-family: 'NAMU-paragraph';
   height: 4em;
   display: flex;
   justify-content: center;
@@ -159,11 +183,11 @@ header{
 
 
 
-/* ---------- initial_block --------- */
+/* ---------- initial_part --------- */
 
-#initial_block{
+#initial_part{
   position: relative;
-  background-image: url('media/Pages/Page_1_BG_VS.webp');
+  background-image: url('media/parts/inital/FF/background_desktop.webp');
   background-position: 50% 50%;
   background-size: cover;
   height: var(--app-height);
@@ -193,37 +217,34 @@ header{
 }
 
 .initial_text_overlay_top {
-  background-image: url('media/Pages/Page_1_OL_Top_VS.webp');
+  background-image: url('media/parts/inital/FF/overlay_top.webp');
   background-position: 50% 50%;
   background-size: cover;
   width: 100%;
-  aspect-ratio: 1920 / 600;
+  aspect-ratio: 1920 / 256;
   position: absolute; /* Allow it to overlap */
-  top: 0;
+  top: 3.16em;
   left: 0;
   z-index: 0;
 }
 
 .initial_text_overlay_middle {
-  background-image: url('media/Pages/Page_1_OL_Middle.webp');
+  background-image: url('media/parts/inital/FF/overlay_middle.webp');
   background-position: 50% 50%;
   background-size: cover;
-  width: 100%;
-  aspect-ratio: 1080 / 1920;
   position: absolute; /* Allow it to overlap */
-  bottom: 50%;
-  transform: translateY(50%);
-  left: 0;
-  z-index: 0;
-  visibility: hidden;
+  height: var(--app-height);
+  min-height: var(--app-height);
+  width: 100%;
+  z-index: 1;
 }
 
 .initial_text_overlay_bottom {
-  background-image: url('media/Pages/Page_1_OL_Bottom_VS.webp');
+  background-image: url('media/parts/inital/FF/overlay_bottom.webp');
   background-position: 50% 50%;
   background-size: cover;
   width: 100%;
-  aspect-ratio: 1920 / 600;
+  aspect-ratio: 1920 / 444;
   bottom: 0;
   left: 0;
   z-index: 0;
@@ -256,17 +277,17 @@ header{
   text-align: center;
 }
 
-#initial_block h1{
+#initial_part h1{
   font-size: 8.5em;
   margin: 0px;
-  font-family: 'Mak-bold';
+  font-family: 'NAMU-heading';
   color: white;
   line-height: 0.9;
 }
 
-#initial_block h2 {
+#initial_part h2 {
   font-size: 3.8em;
-  font-family: 'Hero-light';
+  font-family: 'NAMU-paragraph';
   color: white;
   line-height: 0.95;
   margin: 0px;
@@ -291,7 +312,7 @@ header{
   animation: bounce 2s infinite;
   text-decoration-color: white;
   text-underline-offset: 0.1em;
-  visibility: visible;
+  visibility: hidden;
 }
 
 @keyframes bounce {
@@ -334,7 +355,7 @@ header{
 
 .scroll_down_text{
   font-size: 1.5em;
-  font-family: 'Hero-regular';
+  font-family: 'NAMU-paragraph';
   color: white;
   margin: 0px;
   text-align: center;
@@ -342,7 +363,7 @@ header{
 }
 
 .tickets {
-  background-image: url('media/Pages/Ticket.webp');
+  background-image: url('media/parts/inital/ticket.webp');
   background-position: 50% 50%;  
   background-size: contain;
   background-repeat: no-repeat;
@@ -359,14 +380,14 @@ header{
   animation: bounce-h 2s infinite;
 }
 
-/* ---------- /initial_block --------- */
+/* ---------- /initial_part --------- */
 
 
 
-/* ---------- about_project_block --------- */
+/* ---------- about_project_part --------- */
 
-#about_project_block {
-  background-image: url('media/Pages/Page_2_BG.webp');
+#about_project_part {
+  background-image: url('media/parts/about-project/background.webp');
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
@@ -374,7 +395,7 @@ header{
   min-height: 800px;
 }
 
-.about_project_block_overlay {
+.about_project_part_overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -386,39 +407,40 @@ header{
   align-items: center;
 }
 
-.about_project_block_overlay h3 {
+.about_project_part_overlay h3 {
   width: 55%;
   text-align: center;
   color: white;
-  font-family: 'Hero-light';
+  font-family: 'NAMU-paragraph';
   font-size: 1.5em;
   padding: 1.25px;
 }
 
-/* ---------- /about_project_block --------- */
+/* ---------- /about_project_part --------- */
 
 
 
-/* ---------- about_us_block --------- */
+/* ---------- about_us_part --------- */
 
-#about_us_block {
+#about_us_part {
   height: fit-content;
   min-height: fit-content;
-  background-image: url('media/Pages/Page_3_BG.webp');
+  background-image: url('media/parts/about-us/background.webp');
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
 }
 
-.about_us_block_heading{
-  font-family: 'Mak-bold';
+.about_us_part_heading{
+  font-family: 'NAMU-heading';
   font-size: 7em;
   margin: 0px;
   padding: 75px 0px 43px 75px;
   color: white;
+  text-transform: uppercase;
 }
 
-.about_us_block_paragraph {
+.about_us_part_paragraph {
   /* position: absolute; */
   /* top: 0; */
   /* left: 0; */
@@ -430,11 +452,11 @@ header{
   align-items: center;
 }
 
-.about_us_block_paragraph h3 {
+.about_us_part_paragraph h3 {
   width: 55%;
   /* text-align: center; */
   color: white;
-  font-family: 'Hero-light';
+  font-family: 'NAMU-paragraph';
   font-size: 1.5em;
   padding: 1.25px;
   padding-bottom: 75px;
@@ -465,7 +487,7 @@ header{
 }
 
 .about_us_cards h2{
-  font-family: 'Mak-bold';
+  font-family: 'NAMU-paragraph';
   color: white;
   font-size: 2.6rem;
   margin: 30px 0 5px;
@@ -473,7 +495,7 @@ header{
 }
 
 .about_us_cards p {
-  font-family: 'Hero-light';
+  font-family: 'NAMU-paragraph';
   color: white;
   font-size: 1.5rem;
   text-align: center;
@@ -491,16 +513,16 @@ header{
   text-align: center;
 }
 
-/* ---------- /about_us_block --------- */
+/* ---------- /about_us_part --------- */
 
 
 
-/* ---------- theatre_block --------- */
+/* ---------- theatre_part --------- */
 
-#theatre_block {
+#theatre_part {
   height: fit-content;
   min-height: fit-content;
-  /* background-image: url('media/Pages/Page_7_BG.webp'); */
+  /* background-image: url('media/parts/theatre/background.webp'); */
   background-color: black;
   background-position: 50% 50%;
   background-size: cover;
@@ -508,12 +530,13 @@ header{
 
 }
 
-.theatre_block_heading {
-  font-family: 'Mak-bold';
+.theatre_part_heading {
+  font-family: 'NAMU-heading';
   font-size: 7em;
   margin: 0px;
   padding: 75px 0px 70px 75px;
   color: white;
+  text-transform: uppercase;
 }
 
 
@@ -531,13 +554,15 @@ header{
 }
 
 #call-form {
-  /* font-family: "Hero-regular";
+  /* font-family: "NAMU-paragraph";
   font-size: 2em; */
   width: 350px;
   height: max-content;
 }
 
-.btn-reset {
+.btn-reset,
+.btn-reset_2,
+.btn-reset_3 {
   border: none;
   padding: 0;
   background-color: transparent;
@@ -651,7 +676,7 @@ header{
   margin: 0;
   margin-bottom: 30px;
   text-align: start;
-  font-family: "Hero-regular";
+  font-family: "NAMU-paragraph";
 }
 
 h2.modal_title {
@@ -659,7 +684,7 @@ h2.modal_title {
 }
 
 .modal_text {
-  font-family: "Hero-regular";
+  font-family: "NAMU-paragraph";
   width: 100%;
   margin-bottom: 20px;
   text-align: start;
@@ -670,7 +695,7 @@ p.modal_text {
 }
 
 .buy_ticket {
-  font-family: "Hero-regular";
+  font-family: "NAMU-paragraph";
   border-radius: 5px;
   border: 1px solid black;
   padding: 7px;
@@ -679,31 +704,17 @@ p.modal_text {
 }
 
 #call-form-2 {
-  /* font-family: "Hero-regular";
+  /* font-family: "NAMU-paragraph";
   font-size: 2em; */
   width: 350px;
   height: max-content;
-}
-
-.btn-reset_2 {
-  border: none;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
 }
 
 #call-form-3 {
-  /* font-family: "Hero-regular";
+  /* font-family: "NAMU-paragraph";
   font-size: 2em; */
   width: 350px;
   height: max-content;
-}
-
-.btn-reset_3 {
-  border: none;
-  padding: 0;
-  background-color: transparent;
-  cursor: pointer;
 }
 
 /* .btn_2 {
@@ -731,27 +742,28 @@ p.modal_text {
   width: 100%;
 }
 
-/* ---------- /theatre_block --------- */
+/* ---------- /theatre_part --------- */
 
 
 
-/* ---------- affiche_page --------- */
+/* ---------- affiche_part --------- */
 
-#affiche_page {
+#affiche_part {
   height: 800px;
   min-height: 800px;
   width: 100%;
-  background-image: url('media/Pages/Page_6_BG.webp');
+  background-image: url('media/parts/affiche/background.webp');
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
 }
 
-.affiche_page_heading {
-  font-family: 'Mak-bold';
+.affiche_part_heading {
+  font-family: 'NAMU-heading';
   font-size: 7em;
   color: white;
   padding: 75px 0px 120px 75px;
+  text-transform: uppercase;
 }
 
 .afisha{
@@ -790,7 +802,7 @@ p.modal_text {
 
 .afisha_text{
   color: white;
-  font-family: "Hero-regular";
+  font-family: "NAMU-paragraph";
 }
 
 .afisha_month {
@@ -828,26 +840,27 @@ a.disabled {
   color: gray;
 }
 
-/* ---------- /affiche_page --------- */
+/* ---------- /affiche_part --------- */
 
 
 
-/* ---------- actors_page --------- */
+/* ---------- actors_part --------- */
 
-#actors_page {
+#actors_part {
   height: 1000px;
   min-height: 1000px;
-  background-image: url('media/Pages/Page_8_BG.webp');
+  background-image: url('media/parts/actors/background.webp');
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
 }
 
-.actors_page_heading {
-  font-family: 'Mak-bold';
+.actors_part_heading {
+  font-family: 'NAMU-heading';
   font-size: 7em;
   color: white;
   padding: 75px 0px 91px 75px;
+  text-transform: uppercase;
 }
 
 .actors_gallery_content {
@@ -861,10 +874,13 @@ a.disabled {
 .actors_cards {
   text-decoration: none;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .actors_cards h2{
-  font-family: 'Mak-bold';
+  font-family: 'NAMU-paragraph';
   color: white;
   font-size: 2.6rem;
   margin: 30px 0 5px;
@@ -911,27 +927,27 @@ a.disabled {
   fill: white;
 }
 
-/* ---------- /actors_page --------- */
+/* ---------- /actors_part --------- */
 
 
 
-/* ---------- contacts_page --------- */
+/* ---------- contacts_part --------- */
 
-#contacts_page {
+#contacts_part {
   height: 750px;
   min-height: 750px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  background-image: url('media/Pages/Page_9_BG.webp');
+  background-image: url('media/parts/footer/background.webp');
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
   --contacts-color: #A9A9A9;
 }
 
-.contacts_page_content {
+.contacts_part_content {
   width: 80%;
   height: 100%;
   display: flex;
@@ -940,22 +956,23 @@ a.disabled {
   align-items: flex-start;
 }
 
-.contacts_page_heading {
-  font-family: 'Mak-bold';
+.contacts_part_heading {
+  font-family: 'NAMU-heading';
   font-size: 7em;
   margin: 0px;
   color: var(--contacts-color);
+  text-transform: uppercase;
 }
 
-.contacts_page_description{
-  font-family: 'Hero-regular';
+.contacts_part_description{
+  font-family: 'NAMU-paragraph';
   color: var(--contacts-color);
   font-size: 1em;
   text-align: start;
   margin-bottom: 2em;
 }
 
-.contacts_page_overlay {
+.contacts_part_overlay {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -981,13 +998,13 @@ a.disabled {
 
 .table_heading {
   width: 250px !important;
-  font-family: 'Hero-bold' !important;
+  font-family: 'NAMU-paragraph' !important;
   text-align: start !important;
   color: var(--contacts-color) !important;
 }
 
 .contact_person {
-  font-family: 'Hero-regular';
+  font-family: 'NAMU-paragraph';
   color: var(--contacts-color);
   font-size: 1em;
   text-align: start;
@@ -1025,14 +1042,25 @@ a.disabled {
   align-items: center;
 }
 
+.social_links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .social_links i {
   font-size: 45px;
-  margin-right: 10px;
+}
+
+.social_links--light .fa-brands,
+.social_links--light .icon {
+  color: var(--contacts-color);
+  fill: var(--contacts-color);
 }
 
 .icon {
-  height: 45px;
-  margin-right: 10px;
+  width: 36px;
+  height: 36px;
   fill: var(--contacts-color);
   vertical-align: bottom;
 }
@@ -1070,7 +1098,7 @@ a.disabled {
   align-items: center;
 }
 
-/* ---------- /contacts_page --------- */
+/* ---------- /contacts_part --------- */
 
 
 .contacts_table_media {
