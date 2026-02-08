@@ -1,15 +1,9 @@
 export const contactsData = [
   {
-    heading: 'Администрация и PR',
-    name: 'Мария Миглау',
-    description: 'Ответит на ваши вопросы о билетах, сотрудничестве и приёме на работу.',
+    heading: '',
+    name: 'Надежда Нечуятова',
+    description: 'Ответит на все ваши вопросы.',
     email: 'info@parkkultur.space',
-  },
-  {
-    heading: 'Социальные сети',
-    name: 'Даниил Шевалье',
-    description: 'Есть креативные идеи для наших социальных сетей, вам сюда!',
-    email: 'promo@parkkultur.space',
   },
 ];
 
@@ -18,7 +12,7 @@ export const socialLinks = [
   { href: 'https://www.instagram.com/park.kultur', type: 'instagram', label: 'Instagram' },
   { href: 'https://t.me/parkkultur', type: 'telegram', label: 'Telegram' },
   { href: 'https://www.youtube.com/@park.kultur', type: 'youtube', label: 'YouTube' },
-  { href: 'https://www.tiktok.com/@park_kultur?_t=ZM-90K61YR20VM&_r=1', type: 'tiktok', label: 'TikTok' },
+  // { href: 'https://www.tiktok.com/@park_kultur?_t=ZM-90K61YR20VM&_r=1', type: 'tiktok', label: 'TikTok' },
 ];
 
 export function renderContacts() {

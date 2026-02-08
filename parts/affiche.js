@@ -1,18 +1,11 @@
 export const afishaData = [
-  {
-    day: '13',
-    month: 'Января',
-    title: 'Фантазии Фарятьева (16+)',
-    time: 'вт 19:00',
-    // ticketUrl: 'https://iframeab-pre8338.intickets.ru/seance/63691857',
-  },
-  {
-    day: '14',
-    month: 'Января',
-    title: 'Фантазии Фарятьева (16+)',
-    time: 'ср 19:00',
-    // ticketUrl: 'https://iframeab-pre8338.intickets.ru/seance/63692635',
-  },
+  // {
+  //   day: '13',
+  //   month: 'Января',
+  //   title: 'Фантазии Фарятьева (16+)',
+  //   time: 'вт 19:00',
+  //   // ticketUrl: 'https://iframeab-pre8338.intickets.ru/seance/63691857',
+  // },
 ];
 
 export function renderAfisha() {
@@ -21,6 +14,20 @@ export function renderAfisha() {
   if (!container) return;
 
   container.innerHTML = '';
+
+  if (afishaData.length === 0) {
+    const eventEl = document.createElement('div');
+    eventEl.className = 'afisha_event';
+    
+    const noEventsTitle = document.createElement('p');
+    noEventsTitle.className = 'afisha_no_events';
+    noEventsTitle.textContent = 'Скоро будет анонс следующих спектаклей';
+
+    eventEl.append(noEventsTitle);
+    container.append(eventEl);
+
+    return;
+  }
 
   afishaData.forEach(({ day, month, title, time, ticketUrl }) => {
     const eventEl = document.createElement('div');

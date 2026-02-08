@@ -15,8 +15,9 @@ export const actorsData = [
   { image: 'media/Actors/IIvanov.webp', firstName: 'Илья', lastName: 'Иванов' },
   { image: 'media/Actors/AIzotov.webp', firstName: 'Артём', lastName: 'Изотов' },
   { image: 'media/Actors/NSultanova.webp', firstName: 'Нина', lastName: 'Султанова' },
-  { image: 'media/Actors/MChurmasov.webp', firstName: 'Максим', lastName: 'Чурмасов' },
   { image: 'media/Actors/NVasilieva.webp', firstName: 'Наталия', lastName: 'Васильева' },
+  { image: 'media/Actors/Temp.webp', firstName: 'Кира', lastName: 'Азаренко' },
+  { image: 'media/Actors/Temp.webp', firstName: 'Владислава', lastName: 'Оболенская' },
 ];
 
 export function renderActorsGallery() {

@@ -522,7 +522,7 @@ header{
 #theatre_part {
   height: fit-content;
   min-height: fit-content;
-  /* background-image: url('media/parts/theatre/background.webp'); */
+  background-image: url('media/parts/theatre/background.webp');
   background-color: black;
   background-position: 50% 50%;
   background-size: cover;
@@ -550,7 +550,6 @@ header{
   justify-content: center;
   align-items: flex-end;
   gap: 100px;
-  padding-left: 33%;
 }
 
 #call-form {
@@ -838,6 +837,15 @@ p.modal_text {
 a.disabled {
   pointer-events: none;
   color: gray;
+}
+
+.afisha_no_events {
+  width: 55%;
+  text-align: center;
+  color: white;
+  font-family: 'NAMU-paragraph';
+  font-size: 1.5em;
+  padding: 1.25px;
 }
 
 /* ---------- /affiche_part --------- */
