@@ -3,7 +3,6 @@ export const aboutUsData = [
   { image: 'media/We/MLobova.webp', firstName: 'Мария', lastName: 'Лобова', role: 'Помощник режиссёра' },
   { image: 'media/We/Temp.webp', firstName: 'Надежда', lastName: 'Нечуятова', role: 'Генеральный продюсер' },
   { image: 'media/We/Temp.webp', firstName: 'Павел', lastName: 'Нечуятов', role: 'Финансовый директор' },
-  { image: 'media/We/DSinitsyn.webp', firstName: 'Дмитрий', lastName: 'Синицын', role: 'Линейный продюсер' },
   { image: 'media/We/IShein.webp', firstName: 'Ян', lastName: 'Шеин', role: 'Технический директор' },
   { image: 'media/We/Azmailova.webp', firstName: 'Арина', lastName: 'Измайлова', role: 'Драматург' },
 ];
