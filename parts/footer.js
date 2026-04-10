@@ -3,7 +3,7 @@ export const contactsData = [
     heading: '',
     name: 'Надежда Нечуятова',
     description: 'Ответит на все ваши вопросы.',
-    email: 'info@parkkultur.space',
+    email: 'info@park-kultur.ru',
   },
 ];
 
